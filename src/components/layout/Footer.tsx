@@ -1,51 +1,87 @@
-import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { useI18n } from "@/lib/i18n";
+
+const SERVICES = [
+  "Développement Web",
+  "Développement Mobile",
+  "Intelligence Artificielle",
+  "Cybersécurité",
+  "Cloud & Hébergement",
+  "UI/UX Design",
+  "Maintenance Informatique",
+  "Affiche & Graphisme",
+];
 
 export function Footer() {
   const { t } = useI18n();
   return (
-    <footer className="relative mt-24 border-t border-border bg-surface/40">
-      <div className="container mx-auto grid gap-10 px-4 py-12 md:grid-cols-4">
-        <div className="md:col-span-2">
+    <footer className="mt-24 border-t border-border bg-surface">
+      <div className="container-tight grid gap-12 py-16 md:grid-cols-12">
+        <div className="md:col-span-5">
           <Logo />
-          <p className="mt-3 max-w-md text-sm text-muted-foreground">{t("footer.tagline")}</p>
-          <div className="mt-4 flex gap-2">
-            {[Facebook, Instagram, Linkedin, Twitter].map((Icon, i) => (
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            Eurisstech — Innovating the Digital Future. Solutions innovantes en développement web,
+            intelligence artificielle et cybersécurité.
+          </p>
+          <ul className="mt-6 space-y-1.5 text-sm text-muted-foreground">
+            <li>📍 Calavi, Bénin</li>
+            <li>📧 <a className="hover:text-foreground" href="mailto:contact@eurisstech.com">contact@eurisstech.com</a></li>
+            <li>📞 <a className="hover:text-foreground" href="tel:+22901416757 84">+229 01 41 67 57 84</a></li>
+          </ul>
+          <div className="mt-6 flex gap-2">
+            {[
+              { Icon: Facebook, href: "#", label: "Facebook" },
+              { Icon: Linkedin, href: "#", label: "LinkedIn" },
+              { Icon: Instagram, href: "#", label: "Instagram" },
+              { Icon: Github, href: "#", label: "GitHub" },
+            ].map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="#"
-                aria-label="social"
-                className="grid h-9 w-9 place-items-center rounded-md border border-border bg-surface text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                key={label}
+                href={href}
+                aria-label={label}
+                className="grid h-9 w-9 place-items-center border border-border bg-background text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               >
                 <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>
         </div>
-        <div>
-          <h4 className="text-sm font-semibold text-foreground">{t("footer.links")}</h4>
-          <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+
+        <div className="md:col-span-3">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-foreground">Services</h4>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+            {SERVICES.map((s) => (
+              <li key={s}><Link to="/shop" className="hover:text-foreground">{s}</Link></li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="md:col-span-2">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-foreground">{t("footer.links")}</h4>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-foreground">{t("nav.about")}</Link></li>
             <li><Link to="/shop" className="hover:text-foreground">{t("nav.shop")}</Link></li>
             <li><Link to="/blog" className="hover:text-foreground">{t("nav.blog")}</Link></li>
             <li><Link to="/contact" className="hover:text-foreground">{t("nav.contact")}</Link></li>
           </ul>
         </div>
-        <div>
-          <h4 className="text-sm font-semibold text-foreground">{t("footer.legal")}</h4>
-          <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
+
+        <div className="md:col-span-2">
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-foreground">Légal</h4>
+          <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li><Link to="/mentions-legales" className="hover:text-foreground">Mentions légales</Link></li>
             <li><Link to="/privacy" className="hover:text-foreground">{t("footer.privacy")}</Link></li>
             <li><Link to="/terms" className="hover:text-foreground">{t("footer.terms")}</Link></li>
           </ul>
         </div>
       </div>
+
       <div className="border-t border-border">
-        <div className="container mx-auto flex flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-muted-foreground sm:flex-row">
-          <p>© 2025 F.MotivTech. {t("footer.rights")}</p>
-          <p>Cotonou, Bénin · +229 01 46 37 99 89</p>
+        <div className="container-tight flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row">
+          <p>© 2026 Eurisstech. {t("footer.rights")}</p>
+          <p className="uppercase tracking-widest">Développement · IA · Cybersécurité · Innovation</p>
         </div>
       </div>
     </footer>
