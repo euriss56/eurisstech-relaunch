@@ -1,0 +1,27 @@
+import { useI18n } from "@/lib/i18n";
+import { motion } from "framer-motion";
+
+export function WhatsAppButton() {
+  const { t } = useI18n();
+  return (
+    <motion.a
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6 }}
+      href="https://wa.me/2290145764494"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={t("wa.tooltip")}
+      className="group fixed bottom-5 left-5 z-50 flex items-center gap-2"
+    >
+      <span className="pointer-events-none hidden rounded-md bg-surface-elevated px-3 py-1.5 text-xs font-medium text-foreground opacity-0 shadow-card transition-opacity group-hover:opacity-100 sm:block">
+        {t("wa.tooltip")}
+      </span>
+      <span className="grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-elegant transition-transform hover:scale-110">
+        <svg viewBox="0 0 32 32" className="h-7 w-7" fill="currentColor" aria-hidden="true">
+          <path d="M19.11 17.2c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.34.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51l-.57-.01a1.1 1.1 0 0 0-.8.37c-.27.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.15 4.55.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Zm-5.43 7.43h-.01c-1.77 0-3.5-.48-5.02-1.37l-.36-.21-3.74.98 1-3.65-.23-.37a9.96 9.96 0 0 1-1.54-5.32c0-5.5 4.49-9.98 10.01-9.98 2.67 0 5.18 1.04 7.07 2.93a9.93 9.93 0 0 1 2.93 7.06c0 5.5-4.5 9.93-10.01 9.93Zm8.51-18.43A11.85 11.85 0 0 0 13.68 2.7C7.13 2.7 1.81 8.02 1.8 14.56c0 2.1.55 4.14 1.59 5.94L1.7 26.7l6.32-1.66a11.93 11.93 0 0 0 5.65 1.43h.01c6.55 0 11.87-5.32 11.88-11.86 0-3.17-1.24-6.15-3.48-8.39Z" />
+        </svg>
+      </span>
+    </motion.a>
+  );
+}
