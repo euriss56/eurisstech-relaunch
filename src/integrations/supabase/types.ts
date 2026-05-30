@@ -16,64 +16,67 @@ export type Database = {
     Tables: {
       blog_posts: {
         Row: {
-          content: string
-          cover_emoji: string
+          content: string | null
+          cover_emoji: string | null
           created_at: string
-          excerpt: string
+          excerpt: string | null
           id: string
           published: boolean
           slug: string
-          tag: string
+          tag: string | null
           title: string
+          updated_at: string
         }
         Insert: {
-          content: string
-          cover_emoji?: string
+          content?: string | null
+          cover_emoji?: string | null
           created_at?: string
-          excerpt: string
+          excerpt?: string | null
           id?: string
           published?: boolean
           slug: string
-          tag?: string
+          tag?: string | null
           title: string
+          updated_at?: string
         }
         Update: {
-          content?: string
-          cover_emoji?: string
+          content?: string | null
+          cover_emoji?: string | null
           created_at?: string
-          excerpt?: string
+          excerpt?: string | null
           id?: string
           published?: boolean
           slug?: string
-          tag?: string
+          tag?: string | null
           title?: string
+          updated_at?: string
         }
         Relationships: []
       }
       contact_messages: {
         Row: {
           created_at: string
-          email: string
+          email: string | null
           id: string
           message: string
           name: string
-          phone: string
+          phone: string | null
         }
         Insert: {
           created_at?: string
-          email: string
+          email?: string | null
           id?: string
           message: string
           name: string
-          phone: string
+          phone?: string | null
         }
         Update: {
           created_at?: string
-          email?: string
+          email?: string | null
           id?: string
           message?: string
           name?: string
-          phone?: string
+          phone?: string | null
         }
         Relationships: []
       }
@@ -93,8 +96,8 @@ export type Database = {
           order_id: string
           product_name: string
           product_slug: string
-          qty: number
-          unit_price: number
+          qty?: number
+          unit_price?: number
         }
         Update: {
           created_at?: string
@@ -122,7 +125,6 @@ export type Database = {
           customer_name: string | null
           customer_phone: string | null
           id: string
-          notes: string | null
           payment_method: string | null
           payment_phone: string | null
           payment_reference: string | null
@@ -136,7 +138,6 @@ export type Database = {
           customer_name?: string | null
           customer_phone?: string | null
           id?: string
-          notes?: string | null
           payment_method?: string | null
           payment_phone?: string | null
           payment_reference?: string | null
@@ -150,40 +151,12 @@ export type Database = {
           customer_name?: string | null
           customer_phone?: string | null
           id?: string
-          notes?: string | null
           payment_method?: string | null
           payment_phone?: string | null
           payment_reference?: string | null
           status?: string
           total?: number
           user_id?: string
-        }
-        Relationships: []
-      }
-      profiles: {
-        Row: {
-          avatar_url: string | null
-          created_at: string
-          full_name: string | null
-          id: string
-          phone: string | null
-          updated_at: string
-        }
-        Insert: {
-          avatar_url?: string | null
-          created_at?: string
-          full_name?: string | null
-          id: string
-          phone?: string | null
-          updated_at?: string
-        }
-        Update: {
-          avatar_url?: string | null
-          created_at?: string
-          full_name?: string | null
-          id?: string
-          phone?: string | null
-          updated_at?: string
         }
         Relationships: []
       }
