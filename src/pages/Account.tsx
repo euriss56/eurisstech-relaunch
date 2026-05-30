@@ -13,7 +13,7 @@ import { useQuery } from "@tanstack/react-query";
 import { formatXOF } from "@/lib/products";
 
 
-function Account() {
+function GoogleIcon() {
   return (
     <svg className="h-4 w-4" viewBox="0 0 24 24" aria-hidden>
       <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.75h3.57c2.08-1.92 3.28-4.74 3.28-8.07z"/>
@@ -24,7 +24,7 @@ function Account() {
   );
 }
 
-function AccountPage() {
+function Account() {
   const { user, loading, signOut } = useAuth();
 
   if (loading) return <div className="container mx-auto px-4 py-20 text-center text-muted-foreground">Chargement…</div>;

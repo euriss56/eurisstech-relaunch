@@ -94,7 +94,7 @@ function Checkout() {
 
       toast.success("Commande envoyée. Nous vérifions votre paiement.");
       clear();
-      navigate({ to: user ? "/account" : "/" });
+      navigate(user ? "/account" : "/");
     } catch (err) {
       console.error(err);
       toast.error("Erreur lors de l'enregistrement. Réessayez.");
