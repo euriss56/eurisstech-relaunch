@@ -37,7 +37,7 @@ function BlogPost() {
       const { data, error } = await supabase
         .from("blog_posts")
         .select("*")
-        .eq("slug", slug)
+        .eq("slug", slug!)
         .eq("published", true)
         .maybeSingle();
       if (error) throw error;
