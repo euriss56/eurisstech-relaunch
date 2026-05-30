@@ -7,27 +7,6 @@ import buildingAerial from "@/assets/building-aerial.jpg";
 import lobbyImg from "@/assets/lobby.jpg";
 import receptionImg from "@/assets/reception.jpg";
 
-({
-  head: () => ({
-    meta: [
-      { title: "À propos — F.MotivTech" },
-      {
-        name: "description",
-        content:
-          "Découvrez F.MotivTech, studio de création digitale fondé par Fréjuste GNIMADI à Cotonou, Bénin.",
-      },
-      { property: "og:title", content: "À propos — F.MotivTech" },
-      {
-        property: "og:description",
-        content:
-          "L'histoire, la vision et l'équipe derrière F.MotivTech, dirigée par Fréjuste GNIMADI.",
-      },
-      { property: "og:image", content: buildingExterior },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
-  component: AboutPage,
-});
 
 function About() {
   return (

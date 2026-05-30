@@ -18,15 +18,6 @@ const COVER_BY_SLUG: Record<string, string> = {
   "flyer-vs-bache": blogPrint,
 };
 
-({
-  head: ({ params }) => ({
-    meta: [
-      { title: `${params.slug} — Blog F.MotivTech` },
-      { name: "description", content: "Article du blog F.MotivTech." },
-    ],
-  }),
-  component: PostPage,
-});
 
 interface Post {
   slug: string;

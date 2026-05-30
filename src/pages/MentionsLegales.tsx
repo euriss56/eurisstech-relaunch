@@ -1,16 +1,5 @@
 import { Shield, MapPin, Mail, Phone, Building2, FileText, Scale } from "lucide-react";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Mentions légales — F.MotivTech" },
-      { name: "description", content: "Mentions légales de F.MotivTech. Studio de création digitale basé au Bénin." },
-      { property: "og:title", content: "Mentions légales — F.MotivTech" },
-      { property: "og:description", content: "Informations légales de F.MotivTech." },
-    ],
-  }),
-  component: MentionsLegalesPage,
-});
 
 function MentionsLegales() {
   return (

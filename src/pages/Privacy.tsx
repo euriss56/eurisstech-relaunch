@@ -1,16 +1,5 @@
 import { Shield, Lock, Eye, Trash2, Mail, Phone, MapPin, Server } from "lucide-react";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Politique de confidentialité — F.MotivTech" },
-      { name: "description", content: "Politique de confidentialité de F.MotivTech. Découvrez comment nous protégeons vos données personnelles." },
-      { property: "og:title", content: "Politique de confidentialité — F.MotivTech" },
-      { property: "og:description", content: "Découvrez comment F.MotivTech protège vos données personnelles." },
-    ],
-  }),
-  component: PrivacyPage,
-});
 
 function Privacy() {
   return (

@@ -12,16 +12,6 @@ import { useAuth } from "@/lib/auth";
 import { useQuery } from "@tanstack/react-query";
 import { formatXOF } from "@/lib/products";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Mon compte — F.MotivTech" },
-      { name: "description", content: "Connectez-vous à votre espace F.MotivTech." },
-      { name: "robots", content: "noindex" },
-    ],
-  }),
-  component: AccountPage,
-});
 
 function Account() {
   return (

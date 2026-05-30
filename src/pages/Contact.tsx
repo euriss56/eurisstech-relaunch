@@ -8,18 +8,6 @@ import { Label } from "@/components/ui/label";
 import { useI18n } from "@/lib/i18n";
 import { toast } from "sonner";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Contact — F.MotivTech" },
-      { name: "description", content: "Contactez F.MotivTech à Cotonou, Bénin. Devis sous 24h via WhatsApp." },
-      { property: "og:title", content: "Contact — F.MotivTech" },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
-  component: ContactPage,
-});
 
 const schema = z.object({
   name: z.string().trim().min(2, "Nom requis").max(80),

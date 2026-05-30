@@ -16,16 +16,6 @@ const PAYMENT_METHODS = [
   { id: "moov", label: "Moov Money", number: "+229 01 45 76 44 94", color: "from-sky-400 to-blue-500" },
 ] as const;
 
-({
-  head: () => ({
-    meta: [
-      { title: "Paiement Mobile Money — F.MotivTech" },
-      { name: "description", content: "Réglez votre commande en ligne par MTN Mobile Money ou Moov Money." },
-      { name: "robots", content: "noindex" },
-    ],
-  }),
-  component: CheckoutPage,
-});
 
 function Checkout() {
   const { lang } = useI18n();

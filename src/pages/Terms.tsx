@@ -1,16 +1,5 @@
 import { FileText, CheckCircle, AlertTriangle, XCircle, Mail, Phone, MapPin } from "lucide-react";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Conditions d'utilisation — F.MotivTech" },
-      { name: "description", content: "Conditions d'utilisation de F.MotivTech. Règles d'utilisation du site et des services." },
-      { property: "og:title", content: "Conditions d'utilisation — F.MotivTech" },
-      { property: "og:description", content: "Règles d'utilisation du site et des services F.MotivTech." },
-    ],
-  }),
-  component: TermsPage,
-});
 
 function Terms() {
   return (
