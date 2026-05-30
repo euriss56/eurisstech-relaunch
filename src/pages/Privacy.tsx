@@ -27,7 +27,7 @@ function Privacy() {
           {/* Introduction */}
           <div className="rounded-2xl border border-border bg-surface/60 p-6 md:p-8">
             <p className="text-sm leading-relaxed text-muted-foreground">
-              La présente politique de confidentialité décrit les pratiques de <strong className="text-foreground">F.MotivTech</strong> en matière de collecte,
+              La présente politique de confidentialité décrit les pratiques de <strong className="text-foreground">Eurisstech</strong> en matière de collecte,
               d'utilisation et de protection de vos données personnelles lorsque vous utilisez notre site et nos services.
               En accédant à notre site, vous acceptez les pratiques décrites dans cette politique.
             </p>
@@ -176,14 +176,14 @@ function Privacy() {
               Pour toute question relative à la protection de vos données :
             </p>
             <div className="mt-4 flex flex-col gap-2 text-sm">
-              <a href="mailto:frejustegfm123@gmail.com" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Mail className="h-4 w-4" /> frejustegfm123@gmail.com
+              <a href="mailto:contact@eurisstech.com" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Mail className="h-4 w-4" /> contact@eurisstech.com
               </a>
-              <a href="tel:+2290146379989" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Phone className="h-4 w-4" /> +229 01 46 37 99 89
+              <a href="tel:+2290141675784" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Phone className="h-4 w-4" /> +229 01 41 67 57 84
               </a>
               <span className="inline-flex items-center gap-2 text-muted-foreground">
-                <MapPin className="h-4 w-4" /> Cotonou, République du Bénin
+                <MapPin className="h-4 w-4" /> Calavi, République du Bénin
               </span>
             </div>
           </div>

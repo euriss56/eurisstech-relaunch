@@ -28,8 +28,8 @@ function Terms() {
           <div className="rounded-2xl border border-border bg-surface/60 p-6 md:p-8">
             <p className="text-sm leading-relaxed text-muted-foreground">
               Les présentes conditions d'utilisation régissent l'accès et l'utilisation du site
-              <strong className="text-foreground"> fmotivtech.com </strong>et des services proposés par
-              <strong className="text-foreground"> F.MotivTech</strong>. En accédant au site ou en utilisant nos services,
+              <strong className="text-foreground"> eurisstech.com </strong>et des services proposés par
+              <strong className="text-foreground"> Eurisstech</strong>. En accédant au site ou en utilisant nos services,
               vous acceptez sans réserve l'ensemble de ces conditions. Si vous n'acceptez pas ces conditions,
               veuillez ne pas utiliser notre site.
             </p>
@@ -40,7 +40,7 @@ function Terms() {
             <h2 className="text-xl font-semibold text-foreground">1. Description des services</h2>
             <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
               <p>
-                F.MotivTech propose des services de création digitale comprenant :
+                Eurisstech propose des services de création digitale comprenant :
               </p>
               <ul className="ml-4 list-disc space-y-1">
                 <li>Créations graphiques : logos, affiches, flyers, brochures, cartes de visite, bâches, roll-up, calendriers, packaging, t-shirts, identité visuelle</li>
@@ -50,7 +50,7 @@ function Terms() {
               </ul>
               <p>
                 Les descriptions et tarifs des services sont disponibles sur la page Boutique.
-                F.MotivTech se réserve le droit de modifier ses offres à tout moment.
+                Eurisstech se réserve le droit de modifier ses offres à tout moment.
               </p>
             </div>
           </div>
@@ -140,13 +140,13 @@ function Terms() {
               <p>
                 <strong className="text-foreground">5.1 Transfert de droits :</strong> Après paiement intégral,
                 les droits d'utilisation des créations sont transférés au client pour un usage exclusif.
-                F.MotivTech se réserve le droit d'utiliser les créations à des fins de portfolio et promotion,
+                Eurisstech se réserve le droit d'utiliser les créations à des fins de portfolio et promotion,
                 sauf demande explicite de confidentialité.
               </p>
               <p>
                 <strong className="text-foreground">5.2 Contenu fourni par le client :</strong> Le client garantit
                 détenir tous les droits sur les éléments (textes, images, logos) qu'il fournit pour le projet.
-                F.MotivTech ne saurait être tenu responsable de tout litige lié à ces éléments.
+                Eurisstech ne saurait être tenu responsable de tout litige lié à ces éléments.
               </p>
               <p>
                 <strong className="text-foreground">5.3 Stock images :</strong> Les images utilisées proviennent
@@ -161,7 +161,7 @@ function Terms() {
             <h2 className="text-xl font-semibold text-foreground">6. Limitation de responsabilité</h2>
             <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
               <p>
-                F.MotivTech s'engage à fournir ses services avec diligence et professionnalisme.
+                Eurisstech s'engage à fournir ses services avec diligence et professionnalisme.
                 Cependant, notre responsabilité ne saurait être engagée en cas de :
               </p>
               <ul className="ml-4 list-disc space-y-1">
@@ -187,7 +187,7 @@ function Terms() {
               </p>
               <p>
                 <strong className="text-foreground">7.2 Pendant le projet :</strong> En cas d'annulation après le début du travail,
-                un remboursement proportionnel au travail non réalisé peut être accordé, sous réserve d'acceptation de F.MotivTech.
+                un remboursement proportionnel au travail non réalisé peut être accordé, sous réserve d'acceptation de Eurisstech.
               </p>
               <p>
                 <strong className="text-foreground">7.3 Après livraison :</strong> Aucun remboursement n'est possible
@@ -195,7 +195,7 @@ function Terms() {
               </p>
               <p>
                 <strong className="text-foreground">7.4 Non-satisfaction :</strong> En cas de litige,
-                F.MotivTech s'engage à proposer des révisions ou corrections pour satisfaire le client dans la mesure du raisonnable.
+                Eurisstech s'engage à proposer des révisions ou corrections pour satisfaire le client dans la mesure du raisonnable.
               </p>
             </div>
           </div>
@@ -210,10 +210,10 @@ function Terms() {
                 <li>Ne pas utiliser le site à des fins illégales ou frauduleuses</li>
                 <li>Ne pas tenter d'accéder de manière non autorisée à nos systèmes</li>
                 <li>Ne pas perturber le fonctionnement du site</li>
-                <li>Respecter la propriété intellectuelle de F.MotivTech et des tiers</li>
+                <li>Respecter la propriété intellectuelle de Eurisstech et des tiers</li>
               </ul>
               <p>
-                En cas de non-respect, F.MotivTech se réserve le droit de suspendre ou supprimer votre compte
+                En cas de non-respect, Eurisstech se réserve le droit de suspendre ou supprimer votre compte
                 et de refuser toute future prestation.
               </p>
             </div>
@@ -226,7 +226,7 @@ function Terms() {
               <p>
                 Les présentes conditions sont régies par le droit de la République du Bénin.
                 En cas de litige, une solution amiable sera recherchée en priorité.
-                À défaut d'accord, les tribunaux compétents de Cotonou seront seuls habilités à connaître du litige.
+                À défaut d'accord, les tribunaux compétents de Cotonou (Bénin) seront seuls habilités à connaître du litige.
               </p>
             </div>
           </div>
@@ -236,7 +236,7 @@ function Terms() {
             <h2 className="text-xl font-semibold text-foreground">10. Modification des conditions</h2>
             <div className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
               <p>
-                F.MotivTech se réserve le droit de modifier ces conditions d'utilisation à tout moment.
+                Eurisstech se réserve le droit de modifier ces conditions d'utilisation à tout moment.
                 Les modifications prendront effet dès leur publication sur le site. Il est de votre responsabilité
                 de consulter régulièrement cette page.
               </p>
@@ -250,14 +250,14 @@ function Terms() {
               Pour toute question concernant ces conditions d'utilisation :
             </p>
             <div className="mt-4 flex flex-col gap-2 text-sm">
-              <a href="mailto:frejustegfm123@gmail.com" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Mail className="h-4 w-4" /> frejustegfm123@gmail.com
+              <a href="mailto:contact@eurisstech.com" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Mail className="h-4 w-4" /> contact@eurisstech.com
               </a>
-              <a href="tel:+2290146379989" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Phone className="h-4 w-4" /> +229 01 46 37 99 89
+              <a href="tel:+2290141675784" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Phone className="h-4 w-4" /> +229 01 41 67 57 84
               </a>
               <span className="inline-flex items-center gap-2 text-muted-foreground">
-                <MapPin className="h-4 w-4" /> Cotonou, République du Bénin
+                <MapPin className="h-4 w-4" /> Calavi, République du Bénin
               </span>
             </div>
           </div>

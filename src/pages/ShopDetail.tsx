@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import {Link} 
+import { Link } from "react-router-dom";
 import { ArrowLeft, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";

@@ -12,7 +12,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const PAYMENT_METHODS = [
-  { id: "mtn", label: "MTN Mobile Money", number: "+229 01 46 37 99 89", color: "from-yellow-400 to-yellow-500" },
+  { id: "mtn", label: "MTN Mobile Money", number: "+229 01 41 67 57 84", color: "from-yellow-400 to-yellow-500" },
   { id: "moov", label: "Moov Money", number: "+229 01 45 76 44 94", color: "from-sky-400 to-blue-500" },
 ] as const;
 
@@ -82,7 +82,7 @@ function Checkout() {
       // Notify the team on WhatsApp with full payment info
       const lines = enriched.map((e) => `• ${e.product.name.fr} x${e.qty} — ${formatXOF(e.product.priceFrom * e.qty)}`).join("%0A");
       const msg =
-        `🛒 Nouvelle commande F.MotivTech%0A` +
+        `🛒 Nouvelle commande Eurisstech%0A` +
         `Client : ${name}%0A` +
         `Téléphone : ${phone}%0A%0A` +
         `${lines}%0A%0A` +
