@@ -1,16 +1,5 @@
 import { Shield, MapPin, Mail, Phone, Building2, FileText, Scale } from "lucide-react";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Mentions légales — F.MotivTech" },
-      { name: "description", content: "Mentions légales de F.MotivTech. Studio de création digitale basé au Bénin." },
-      { property: "og:title", content: "Mentions légales — F.MotivTech" },
-      { property: "og:description", content: "Informations légales de F.MotivTech." },
-    ],
-  }),
-  component: MentionsLegalesPage,
-});
 
 function MentionsLegales() {
   return (
@@ -26,7 +15,7 @@ function MentionsLegales() {
               Mentions légales
             </h1>
             <p className="mt-4 text-muted-foreground">
-              Informations légales et éditoriales du site F.MotivTech
+              Informations légales et éditoriales du site Eurisstech
             </p>
           </div>
         </div>
@@ -43,15 +32,15 @@ function MentionsLegales() {
             </div>
             <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
               <p>
-                Le site <strong className="text-foreground">fmotivtech.com</strong> est édité par :
+                Le site <strong className="text-foreground">eurisstech.com</strong> est édité par :
               </p>
               <ul className="ml-4 list-disc space-y-1">
-                <li><strong className="text-foreground">Raison sociale :</strong> F.MotivTech</li>
+                <li><strong className="text-foreground">Raison sociale :</strong> Eurisstech</li>
                 <li><strong className="text-foreground">Forme juridique :</strong> Entreprise individuelle</li>
-                <li><strong className="text-foreground">Représentant légal :</strong> Fréjuste GNIMADI</li>
-                <li><strong className="text-foreground">Siège social :</strong> Cotonou, République du Bénin</li>
-                <li><strong className="text-foreground">Email :</strong> frejustegfm123@gmail.com</li>
-                <li><strong className="text-foreground">Téléphone :</strong> +229 01 46 37 99 89</li>
+                <li><strong className="text-foreground">Représentant légal :</strong> Euriss Mahunan FANOU</li>
+                <li><strong className="text-foreground">Siège social :</strong> Calavi, République du Bénin</li>
+                <li><strong className="text-foreground">Email :</strong> contact@eurisstech.com</li>
+                <li><strong className="text-foreground">Téléphone :</strong> +229 01 41 67 57 84</li>
               </ul>
             </div>
           </div>
@@ -82,11 +71,11 @@ function MentionsLegales() {
             <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
               <p>
                 L'ensemble des éléments constituant le site (textes, images, graphismes, logos, icônes, etc.)
-                est la propriété exclusive de <strong className="text-foreground">F.MotivTech</strong>.
+                est la propriété exclusive de <strong className="text-foreground">Eurisstech</strong>.
               </p>
               <p>
                 Toute reproduction, représentation, modification, publication, adaptation ou exploitation,
-                totale ou partielle, des éléments du site est interdite sans l'autorisation écrite préalable de F.MotivTech.
+                totale ou partielle, des éléments du site est interdite sans l'autorisation écrite préalable de Eurisstech.
               </p>
               <p>
                 Toute utilisation non autorisée constitue une contrefaçon et expose son auteur à des poursuites judiciaires.
@@ -110,11 +99,11 @@ function MentionsLegales() {
                 de vos données. Pour l'exercer, contactez-nous :
               </p>
               <div className="mt-4 flex flex-col gap-2 text-sm">
-                <a href="mailto:frejustegfm123@gmail.com" className="inline-flex items-center gap-2 text-primary hover:underline">
-                  <Mail className="h-4 w-4" /> frejustegfm123@gmail.com
+                <a href="mailto:contact@eurisstech.com" className="inline-flex items-center gap-2 text-primary hover:underline">
+                  <Mail className="h-4 w-4" /> contact@eurisstech.com
                 </a>
-                <a href="tel:+2290146379989" className="inline-flex items-center gap-2 text-primary hover:underline">
-                  <Phone className="h-4 w-4" /> +229 01 46 37 99 89
+                <a href="tel:+2290141675784" className="inline-flex items-center gap-2 text-primary hover:underline">
+                  <Phone className="h-4 w-4" /> +229 01 41 67 57 84
                 </a>
               </div>
             </div>
@@ -144,14 +133,14 @@ function MentionsLegales() {
               Pour toute question relative aux mentions légales, contactez-nous :
             </p>
             <div className="mt-4 flex flex-col gap-2 text-sm">
-              <a href="mailto:frejustegfm123@gmail.com" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Mail className="h-4 w-4" /> frejustegfm123@gmail.com
+              <a href="mailto:contact@eurisstech.com" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Mail className="h-4 w-4" /> contact@eurisstech.com
               </a>
-              <a href="tel:+2290146379989" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Phone className="h-4 w-4" /> +229 01 46 37 99 89
+              <a href="tel:+2290141675784" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Phone className="h-4 w-4" /> +229 01 41 67 57 84
               </a>
               <span className="inline-flex items-center gap-2 text-muted-foreground">
-                <MapPin className="h-4 w-4" /> Cotonou, République du Bénin
+                <MapPin className="h-4 w-4" /> Calavi, République du Bénin
               </span>
             </div>
           </div>

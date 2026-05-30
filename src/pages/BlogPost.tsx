@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
@@ -18,15 +18,6 @@ const COVER_BY_SLUG: Record<string, string> = {
   "flyer-vs-bache": blogPrint,
 };
 
-({
-  head: ({ params }) => ({
-    meta: [
-      { title: `${params.slug} — Blog F.MotivTech` },
-      { name: "description", content: "Article du blog F.MotivTech." },
-    ],
-  }),
-  component: PostPage,
-});
 
 interface Post {
   slug: string;
@@ -46,7 +37,7 @@ function BlogPost() {
       const { data, error } = await supabase
         .from("blog_posts")
         .select("*")
-        .eq("slug", slug)
+        .eq("slug", slug!)
         .eq("published", true)
         .maybeSingle();
       if (error) throw error;

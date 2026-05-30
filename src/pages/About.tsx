@@ -7,27 +7,6 @@ import buildingAerial from "@/assets/building-aerial.jpg";
 import lobbyImg from "@/assets/lobby.jpg";
 import receptionImg from "@/assets/reception.jpg";
 
-({
-  head: () => ({
-    meta: [
-      { title: "À propos — F.MotivTech" },
-      {
-        name: "description",
-        content:
-          "Découvrez F.MotivTech, studio de création digitale fondé par Fréjuste GNIMADI à Cotonou, Bénin.",
-      },
-      { property: "og:title", content: "À propos — F.MotivTech" },
-      {
-        property: "og:description",
-        content:
-          "L'histoire, la vision et l'équipe derrière F.MotivTech, dirigée par Fréjuste GNIMADI.",
-      },
-      { property: "og:image", content: buildingExterior },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
-  component: AboutPage,
-});
 
 function About() {
   return (
@@ -48,7 +27,7 @@ function About() {
               Nous bâtissons des marques qui <span className="text-primary">performent</span>.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-              F.MotivTech est un studio de création digitale basé à Cotonou, dédié aux
+              Eurisstech est un studio de création digitale basé à Cotonou, dédié aux
               entrepreneurs et entreprises qui veulent une identité forte et un web qui convertit.
             </p>
           </div>
@@ -62,7 +41,7 @@ function About() {
             <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-primary/20 via-transparent to-primary/10 blur-2xl" />
             <img
               src={founderImg}
-              alt="Fréjuste GNIMADI, fondateur de F.MotivTech"
+              alt="Euriss Mahunan FANOU, fondateur de Eurisstech"
               className="w-full rounded-2xl object-cover shadow-elegant"
             />
           </div>
@@ -71,7 +50,7 @@ function About() {
               Le fondateur
             </span>
             <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-              Monsieur Fréjuste GNIMADI
+              Monsieur Euriss Mahunan FANOU
             </h2>
             <p className="mt-2 text-sm font-medium text-muted-foreground">
               Fondateur & Directeur Général
@@ -79,8 +58,8 @@ function About() {
             <div className="mt-6 space-y-4 text-foreground/80">
               <p>
                 Passionné par le design, la technologie et l'entrepreneuriat,
-                <span className="font-semibold text-foreground"> Fréjuste GNIMADI </span>
-                a fondé F.MotivTech avec une conviction simple : chaque entreprise mérite une
+                <span className="font-semibold text-foreground"> Euriss Mahunan FANOU </span>
+                a fondé Eurisstech avec une conviction simple : chaque entreprise mérite une
                 image professionnelle et des outils digitaux à la hauteur de ses ambitions.
               </p>
               <p>
@@ -156,17 +135,17 @@ function About() {
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           <img
             src={buildingExterior}
-            alt="Bâtiment F.MotivTech"
+            alt="Bâtiment Eurisstech"
             className="h-72 w-full rounded-2xl object-cover shadow-card md:row-span-2 md:h-full"
           />
           <img
             src={lobbyImg}
-            alt="Hall d'accueil F.MotivTech"
+            alt="Hall d'accueil Eurisstech"
             className="h-72 w-full rounded-2xl object-cover shadow-card"
           />
           <img
             src={receptionImg}
-            alt="Réception F.MotivTech"
+            alt="Réception Eurisstech"
             className="h-72 w-full rounded-2xl object-cover shadow-card"
           />
         </div>

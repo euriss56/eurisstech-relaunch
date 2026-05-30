@@ -8,18 +8,6 @@ import { Label } from "@/components/ui/label";
 import { useI18n } from "@/lib/i18n";
 import { toast } from "sonner";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Contact — F.MotivTech" },
-      { name: "description", content: "Contactez F.MotivTech à Cotonou, Bénin. Devis sous 24h via WhatsApp." },
-      { property: "og:title", content: "Contact — F.MotivTech" },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
-  component: ContactPage,
-});
 
 const schema = z.object({
   name: z.string().trim().min(2, "Nom requis").max(80),
@@ -64,9 +52,9 @@ function Contact() {
       <div className="mt-12 grid gap-8 lg:grid-cols-5">
         <div className="lg:col-span-2 space-y-4">
           {[
-            { Icon: Phone, label: "Téléphone", value: "+229 01 46 37 99 89", href: "tel:+22901463799 89" },
-            { Icon: Mail, label: "Email", value: "frejustegfm123@gmail.com", href: "mailto:frejustegfm123@gmail.com" },
-            { Icon: MapPin, label: "Adresse", value: "Cotonou, Bénin" },
+            { Icon: Phone, label: "Téléphone", value: "+229 01 41 67 57 84", href: "tel:+2290141675784" },
+            { Icon: Mail, label: "Email", value: "contact@eurisstech.com", href: "mailto:contact@eurisstech.com" },
+            { Icon: MapPin, label: "Adresse", value: "Calavi, Bénin" },
           ].map(({ Icon, label, value, href }) => {
             const content = (
               <div className="flex items-start gap-4">

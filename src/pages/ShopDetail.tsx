@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import {Link} 
+import { Link } from "react-router-dom";
 import { ArrowLeft, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -8,35 +8,6 @@ import { getProduct, formatXOF } from "@/lib/products";
 import { useCart } from "@/lib/cart";
 import { toast } from "sonner";
 
-({
-  loader: ({ params }) => {
-    const product = getProduct(params.slug);
-    if (!product) return null;
-    return { product };
-  },
-  head: ({ loaderData }) => {
-    const p = loaderData?.product;
-    const title = p ? `${p.name.fr} — F.MotivTech` : "Produit — F.MotivTech";
-    const desc = p?.short.fr ?? "Service F.MotivTech";
-    return {
-      meta: [
-        { title },
-        { name: "description", content: desc },
-        { property: "og:title", content: title },
-        { property: "og:description", content: desc },
-        { property: "og:type", content: "product" },
-      ],
-      links: p ? [{ rel: "canonical", href: `/shop/${p.slug}` }] : [],
-    };
-  },
-  notFoundComponent: () => (
-    <div className="container mx-auto px-4 py-20 text-center">
-      <h1 className="text-2xl font-bold">Produit introuvable</h1>
-      <Link to="/shop" className="mt-4 inline-flex text-primary hover:underline">← Retour</Link>
-    </div>
-  ),
-  component: ProductPage,
-});
 
 function ShopDetail() {
   const params = useParams<{ slug: string }>();

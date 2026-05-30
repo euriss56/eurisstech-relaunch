@@ -10,22 +10,6 @@ import { toast } from "sonner";
 
 type Search = { cat?: Category | "all" };
 
-({
-  head: () => ({
-    meta: [
-      { title: "Boutique — F.MotivTech" },
-      { name: "description", content: "Catalogue F.MotivTech : créations graphiques et sites web professionnels au Bénin." },
-      { property: "og:title", content: "Boutique — F.MotivTech" },
-      { property: "og:description", content: "Découvrez nos services de graphisme et de développement web." },
-      { property: "og:url", content: "/shop" },
-    ],
-    links: [{ rel: "canonical", href: "/shop" }],
-  }),
-  validateSearch: (s: Record<string, unknown>): Search => ({
-    cat: (s.cat === "graphic" || s.cat === "web" || s.cat === "all" ? s.cat : undefined) as Search["cat"],
-  }),
-  component: Shop,
-});
 
 function Shop() {
   const { t, lang } = useI18n();

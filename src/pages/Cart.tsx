@@ -5,16 +5,6 @@ import { useI18n } from "@/lib/i18n";
 import { useCart } from "@/lib/cart";
 import { formatXOF } from "@/lib/products";
 
-({
-  head: () => ({
-    meta: [
-      { title: "Panier — F.MotivTech" },
-      { name: "description", content: "Votre panier F.MotivTech." },
-      { name: "robots", content: "noindex" },
-    ],
-  }),
-  component: CartPage,
-});
 
 function Cart() {
   const { t, lang } = useI18n();

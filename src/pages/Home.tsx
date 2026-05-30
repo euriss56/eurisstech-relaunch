@@ -9,19 +9,6 @@ import catGraphic from "@/assets/cat-graphic.jpg";
 import catWeb from "@/assets/cat-web.jpg";
 import buildingAerial from "@/assets/building-aerial.jpg";
 
-({
-  head: () => ({
-    meta: [
-      { title: "F.MotivTech — Identité visuelle & sites web pro au Bénin" },
-      { name: "description", content: "Studio digital au Bénin : logos, affiches, flyers à partir de 1000F. Sites web professionnels à partir de 100 000F." },
-      { property: "og:title", content: "F.MotivTech — Identité visuelle & sites web pro" },
-      { property: "og:description", content: "Créations graphiques et web sur mesure au Bénin." },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
-  component: Home,
-});
 
 function Home() {
   const { t, lang } = useI18n();

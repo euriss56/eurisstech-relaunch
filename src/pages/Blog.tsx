@@ -27,19 +27,6 @@ const COVER_BY_TAG: Record<string, string> = {
   Stratégie: blogSocial,
   Marketing: blogPrint,
 };
-({
-  head: () => ({
-    meta: [
-      { title: "Blog & Promotions — F.MotivTech" },
-      { name: "description", content: "Conseils design, offres spéciales et nouveautés F.MotivTech au Bénin." },
-      { property: "og:title", content: "Blog & Promotions — F.MotivTech" },
-      { property: "og:description", content: "Conseils design, offres spéciales et nouveautés." },
-      { property: "og:url", content: "/blog" },
-    ],
-    links: [{ rel: "canonical", href: "/blog" }],
-  }),
-  component: BlogPage,
-});
 
 interface PostRow {
   slug: string;
