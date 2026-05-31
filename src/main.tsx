@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { I18nProvider } from "@/lib/i18n";
 import { AuthProvider } from "@/lib/auth";
 import { CartProvider } from "@/lib/cart";
+import { ThemeProvider } from "@/lib/theme";
 import App from "./App";
 import "./styles.css";
 
@@ -15,14 +16,16 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <I18nProvider>
-          <AuthProvider>
-            <CartProvider>
-              <App />
-              <Toaster />
-            </CartProvider>
-          </AuthProvider>
-        </I18nProvider>
+        <ThemeProvider>
+          <I18nProvider>
+            <AuthProvider>
+              <CartProvider>
+                <App />
+                <Toaster />
+              </CartProvider>
+            </AuthProvider>
+          </I18nProvider>
+        </ThemeProvider>
       </BrowserRouter>
     </QueryClientProvider>
   </StrictMode>,
