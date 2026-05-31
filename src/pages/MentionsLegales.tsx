@@ -39,7 +39,7 @@ function MentionsLegales() {
                 <li><strong className="text-foreground">Forme juridique :</strong> Entreprise individuelle</li>
                 <li><strong className="text-foreground">Représentant légal :</strong> Euriss Mahunan FANOU</li>
                 <li><strong className="text-foreground">Siège social :</strong> Calavi, République du Bénin</li>
-                <li><strong className="text-foreground">Email :</strong> contact@eurisstech.com</li>
+                <li><strong className="text-foreground">Email :</strong> fanoueuriss@gmail.com</li>
                 <li><strong className="text-foreground">Téléphone :</strong> +229 01 41 67 57 84</li>
               </ul>
             </div>
@@ -99,8 +99,8 @@ function MentionsLegales() {
                 de vos données. Pour l'exercer, contactez-nous :
               </p>
               <div className="mt-4 flex flex-col gap-2 text-sm">
-                <a href="mailto:contact@eurisstech.com" className="inline-flex items-center gap-2 text-primary hover:underline">
-                  <Mail className="h-4 w-4" /> contact@eurisstech.com
+                <a href="mailto:fanoueuriss@gmail.com" className="inline-flex items-center gap-2 text-primary hover:underline">
+                  <Mail className="h-4 w-4" /> fanoueuriss@gmail.com
                 </a>
                 <a href="tel:+2290141675784" className="inline-flex items-center gap-2 text-primary hover:underline">
                   <Phone className="h-4 w-4" /> +229 01 41 67 57 84
@@ -133,8 +133,8 @@ function MentionsLegales() {
               Pour toute question relative aux mentions légales, contactez-nous :
             </p>
             <div className="mt-4 flex flex-col gap-2 text-sm">
-              <a href="mailto:contact@eurisstech.com" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Mail className="h-4 w-4" /> contact@eurisstech.com
+              <a href="mailto:fanoueuriss@gmail.com" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Mail className="h-4 w-4" /> fanoueuriss@gmail.com
               </a>
               <a href="tel:+2290141675784" className="inline-flex items-center gap-2 text-primary hover:underline">
                 <Phone className="h-4 w-4" /> +229 01 41 67 57 84
