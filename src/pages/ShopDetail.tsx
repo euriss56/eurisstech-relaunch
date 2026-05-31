@@ -27,7 +27,7 @@ function ShopDetail() {
       <div className="mt-8 grid gap-10 lg:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-surface shadow-elegant">
-            <img
+            <img loading="lazy" decoding="async"
               src={product.image}
               alt={product.name[lang]}
               className="h-full w-full object-cover"

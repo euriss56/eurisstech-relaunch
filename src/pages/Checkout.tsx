@@ -231,7 +231,7 @@ function Checkout() {
             {enriched.map(({ product, qty }) => (
               <li key={product.slug} className="flex items-center gap-3 text-sm">
                 <div className="h-12 w-12 shrink-0 overflow-hidden rounded-md bg-surface-elevated">
-                  <img src={product.image} alt={product.name[lang]} className="h-full w-full object-cover" />
+                  <img loading="lazy" decoding="async" src={product.image} alt={product.name[lang]} className="h-full w-full object-cover" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="truncate font-medium">{product.name[lang]}</p>

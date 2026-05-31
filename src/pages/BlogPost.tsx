@@ -81,7 +81,7 @@ function BlogPost() {
         <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">{post.title}</h1>
         <p className="mt-4 text-lg text-muted-foreground">{post.excerpt}</p>
         <div className="relative mt-8 aspect-[2/1] overflow-hidden rounded-2xl border border-border">
-          <img src={COVER_BY_SLUG[post.slug] ?? blogBranding} alt={post.title} className="h-full w-full object-cover" />
+          <img loading="lazy" decoding="async" src={COVER_BY_SLUG[post.slug] ?? blogBranding} alt={post.title} className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent" />
         </div>
         <div className="mt-6 text-xs text-muted-foreground">
