@@ -3,6 +3,7 @@ import { ShoppingCart, User, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Logo } from "@/components/brand/Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 import { useI18n } from "@/lib/i18n";
 import { useCart } from "@/lib/cart";
 import { Button } from "@/components/ui/button";
@@ -45,6 +46,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-1">
+          <ThemeToggle />
           <LanguageSwitcher />
           <Link to="/account" aria-label={t("nav.account")}>
             <Button variant="ghost" size="icon" className="text-foreground/80 hover:text-foreground">
