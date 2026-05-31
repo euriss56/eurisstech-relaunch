@@ -27,7 +27,7 @@ export function Footer() {
           </p>
           <ul className="mt-6 space-y-1.5 text-sm text-muted-foreground">
             <li>📍 Calavi, Bénin</li>
-            <li>📧 <a className="hover:text-foreground" href="mailto:contact@eurisstech.com">contact@eurisstech.com</a></li>
+            <li>📧 <a className="hover:text-foreground" href="mailto:fanoueuriss@gmail.com">fanoueuriss@gmail.com</a></li>
             <li>📞 <a className="hover:text-foreground" href="tel:+22901416757 84">+229 01 41 67 57 84</a></li>
           </ul>
           <div className="mt-6 flex gap-2">

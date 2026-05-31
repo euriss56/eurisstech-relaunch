@@ -5,7 +5,7 @@ export function PromoBanner() {
     "+229 01 41 67 57 84",
     "Développement Web · Mobile · IA",
     "Cybersécurité · Cloud · UI/UX",
-    "contact@eurisstech.com",
+    "fanoueuriss@gmail.com",
   ];
 
   return (

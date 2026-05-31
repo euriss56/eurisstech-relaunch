@@ -53,7 +53,7 @@ function Contact() {
         <div className="lg:col-span-2 space-y-4">
           {[
             { Icon: Phone, label: "Téléphone", value: "+229 01 41 67 57 84", href: "tel:+2290141675784" },
-            { Icon: Mail, label: "Email", value: "contact@eurisstech.com", href: "mailto:contact@eurisstech.com" },
+            { Icon: Mail, label: "Email", value: "fanoueuriss@gmail.com", href: "mailto:fanoueuriss@gmail.com" },
             { Icon: MapPin, label: "Adresse", value: "Calavi, Bénin" },
           ].map(({ Icon, label, value, href }) => {
             const content = (

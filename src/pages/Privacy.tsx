@@ -176,8 +176,8 @@ function Privacy() {
               Pour toute question relative à la protection de vos données :
             </p>
             <div className="mt-4 flex flex-col gap-2 text-sm">
-              <a href="mailto:contact@eurisstech.com" className="inline-flex items-center gap-2 text-primary hover:underline">
-                <Mail className="h-4 w-4" /> contact@eurisstech.com
+              <a href="mailto:fanoueuriss@gmail.com" className="inline-flex items-center gap-2 text-primary hover:underline">
+                <Mail className="h-4 w-4" /> fanoueuriss@gmail.com
               </a>
               <a href="tel:+2290141675784" className="inline-flex items-center gap-2 text-primary hover:underline">
                 <Phone className="h-4 w-4" /> +229 01 41 67 57 84
