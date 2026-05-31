@@ -131,21 +131,13 @@ function About() {
             Un cadre pensé pour la création
           </h2>
         </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10">
           <img
-            src={buildingExterior}
-            alt="Bâtiment Eurisstech"
-            className="h-72 w-full rounded-2xl object-cover shadow-card md:row-span-2 md:h-full"
-          />
-          <img
-            src={lobbyImg}
-            alt="Hall d'accueil Eurisstech"
-            className="h-72 w-full rounded-2xl object-cover shadow-card"
-          />
-          <img
-            src={receptionImg}
-            alt="Réception Eurisstech"
-            className="h-72 w-full rounded-2xl object-cover shadow-card"
+            src={locauxImg}
+            alt="Locaux et identité visuelle Eurisstech"
+            loading="lazy"
+            decoding="async"
+            className="w-full rounded-2xl object-cover shadow-elegant"
           />
         </div>
       </section>
