@@ -28,7 +28,7 @@ function Cart() {
             {enriched.map(({ product, qty }) => (
               <div key={product.slug} className="flex items-center gap-4 rounded-xl border border-border bg-surface p-4">
                 <div className="h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-surface-elevated">
-                  <img src={product.image} alt={product.name[lang]} className="h-full w-full object-cover" />
+                  <img loading="lazy" decoding="async" src={product.image} alt={product.name[lang]} className="h-full w-full object-cover" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="truncate font-semibold">{product.name[lang]}</h3>

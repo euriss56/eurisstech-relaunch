@@ -2,10 +2,7 @@ import {Link} from "react-router-dom";
 import { Target, Eye, Heart, Award, Users, Sparkles, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import founderImg from "@/assets/founder.jpg";
-import buildingExterior from "@/assets/building-exterior.jpg";
-import buildingAerial from "@/assets/building-aerial.jpg";
-import lobbyImg from "@/assets/lobby.jpg";
-import receptionImg from "@/assets/reception.jpg";
+import locauxImg from "@/assets/eurisstech-locaux.jpg";
 
 
 function About() {
@@ -15,7 +12,7 @@ function About() {
       <section className="relative overflow-hidden border-b border-border">
         <div
           className="absolute inset-0 -z-10 bg-cover bg-center"
-          style={{ backgroundImage: `url(${buildingAerial})` }}
+          style={{ backgroundImage: `url(${locauxImg})` }}
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/75 to-background" />
         <div className="container mx-auto px-4 py-20 sm:py-28">
@@ -42,6 +39,8 @@ function About() {
             <img
               src={founderImg}
               alt="Euriss Mahunan FANOU, fondateur de Eurisstech"
+              loading="lazy"
+              decoding="async"
               className="w-full rounded-2xl object-cover shadow-elegant"
             />
           </div>
@@ -132,21 +131,13 @@ function About() {
             Un cadre pensé pour la création
           </h2>
         </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+        <div className="mt-10">
           <img
-            src={buildingExterior}
-            alt="Bâtiment Eurisstech"
-            className="h-72 w-full rounded-2xl object-cover shadow-card md:row-span-2 md:h-full"
-          />
-          <img
-            src={lobbyImg}
-            alt="Hall d'accueil Eurisstech"
-            className="h-72 w-full rounded-2xl object-cover shadow-card"
-          />
-          <img
-            src={receptionImg}
-            alt="Réception Eurisstech"
-            className="h-72 w-full rounded-2xl object-cover shadow-card"
+            src={locauxImg}
+            alt="Locaux et identité visuelle Eurisstech"
+            loading="lazy"
+            decoding="async"
+            className="w-full rounded-2xl object-cover shadow-elegant"
           />
         </div>
       </section>
