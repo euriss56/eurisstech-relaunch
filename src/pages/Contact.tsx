@@ -33,7 +33,9 @@ function Contact() {
     if (error) {
       toast.error("Impossible d'enregistrer le message, ouverture de WhatsApp.");
     } else {
-      toast.success("Message envoyé ! Nous vous répondons rapidement.");
+      toast.success("Message envoyé à fanoueuriss@gmail.com ! Nous vous répondons rapidement.", {
+        description: "Votre demande a bien été transmise à l'adresse fanoueuriss@gmail.com.",
+      });
       setForm({ name: "", email: "", phone: "", message: "" });
     }
     const url = `https://wa.me/2290146379989?text=${encodeURIComponent(
