@@ -359,6 +359,234 @@ export const PRODUCTS: Product[] = [
     ),
     priceFrom: 200000,
   },
+
+  // ---------- NOUVEAUX PRODUITS GRAPHIQUES ----------
+  {
+    slug: "menu-restaurant",
+    category: "graphic",
+    image: imgBrochure,
+    name: t5("Menu Restaurant", "Restaurant Menu"),
+    short: t5("Cartes et menus design pour restaurants et bars.", "Designer menus for restaurants and bars."),
+    description: t5(
+      "Création de menus élégants et lisibles pour restaurants, bars, food-trucks. Format imprimable ou QR code digital.",
+      "Elegant, readable menus for restaurants, bars, food-trucks. Print or QR digital format.",
+    ),
+    features: tl(
+      ["Recto-verso", "Version QR code", "Photos & icônes", "Fichier print-ready"],
+      ["Two-sided", "QR code version", "Photos & icons", "Print-ready"],
+    ),
+    priceFrom: 15000,
+  },
+  {
+    slug: "carton-invitation",
+    category: "graphic",
+    image: imgCarte,
+    name: t5("Carton d'Invitation", "Invitation Card"),
+    short: t5("Invitations mariage, anniversaire, événement pro.", "Wedding, birthday and corporate event invites."),
+    description: t5(
+      "Cartons d'invitation personnalisés pour mariages, anniversaires, baptêmes et événements d'entreprise.",
+      "Custom invitations for weddings, birthdays, baptisms and corporate events.",
+    ),
+    features: tl(
+      ["Design sur mesure", "Recto-verso", "Format imprimable", "Version digitale"],
+      ["Custom design", "Two-sided", "Print-ready", "Digital version"],
+    ),
+    priceFrom: 7000,
+  },
+  {
+    slug: "presentation-powerpoint",
+    category: "graphic",
+    image: imgBrochure,
+    name: t5("Présentation PowerPoint", "PowerPoint Presentation"),
+    short: t5("Slides pro pour pitchs, formations, conférences.", "Pro slides for pitches, training, conferences."),
+    description: t5(
+      "Conception de présentations PowerPoint / Keynote / Google Slides au design moderne et structuré pour convaincre.",
+      "Modern, well-structured PowerPoint / Keynote / Google Slides decks that convert.",
+    ),
+    features: tl(
+      ["Jusqu'à 20 slides", "Template réutilisable", "Icônes & graphiques", "Format .pptx + PDF"],
+      ["Up to 20 slides", "Reusable template", "Icons & charts", ".pptx + PDF formats"],
+    ),
+    priceFrom: 20000,
+  },
+  {
+    slug: "cv-design",
+    category: "graphic",
+    image: imgCarte,
+    name: t5("CV & Lettre de Motivation Design", "Designer CV & Cover Letter"),
+    short: t5("Un CV qui se démarque et décroche l'entretien.", "A CV that stands out and lands the interview."),
+    description: t5(
+      "CV professionnel au design moderne accompagné d'une lettre de motivation assortie, livrés en PDF et Word éditable.",
+      "Modern professional CV with matching cover letter, delivered as PDF and editable Word.",
+    ),
+    features: tl(
+      ["CV + lettre", "PDF + Word éditable", "Design ATS-friendly", "2 révisions incluses"],
+      ["CV + cover letter", "PDF + editable Word", "ATS-friendly design", "2 revisions included"],
+    ),
+    priceFrom: 8000,
+  },
+  {
+    slug: "habillage-vehicule",
+    category: "graphic",
+    image: imgBache,
+    name: t5("Habillage Véhicule (Covering)", "Vehicle Wrap Design"),
+    short: t5("Transformez vos véhicules en panneaux publicitaires.", "Turn vehicles into rolling billboards."),
+    description: t5(
+      "Design de covering complet ou partiel pour voitures, motos, camionnettes : visibilité maximale dans la ville.",
+      "Full or partial vehicle wrap design for cars, bikes, vans — maximum city visibility.",
+    ),
+    features: tl(
+      ["Design sur mesure", "Mockup 3D du véhicule", "Fichier pour imprimeur"],
+      ["Custom design", "3D vehicle mockup", "Printer-ready file"],
+    ),
+    priceFrom: 35000,
+  },
+  {
+    slug: "motion-design",
+    category: "graphic",
+    image: imgReseaux,
+    name: t5("Motion Design / Vidéo Animée", "Motion Design / Animated Video"),
+    short: t5("Vidéos animées courtes pour réseaux et pubs.", "Short animated videos for social and ads."),
+    description: t5(
+      "Création de vidéos motion design courtes (15s à 60s) pour expliquer votre offre, animer vos réseaux ou booster vos publicités.",
+      "Short motion design videos (15s–60s) to explain your offer, energize socials or boost ads.",
+    ),
+    features: tl(
+      ["Durée 15 à 60s", "Voix off optionnelle", "Musique libre de droits", "Format MP4 HD"],
+      ["15–60s duration", "Optional voice-over", "Royalty-free music", "HD MP4"],
+    ),
+    priceFrom: 45000,
+  },
+  {
+    slug: "retouche-photo",
+    category: "graphic",
+    image: imgPackaging,
+    name: t5("Retouche Photo Pro", "Pro Photo Retouching"),
+    short: t5("Photos produits et portraits retouchés pro.", "Product photos and portraits, pro-retouched."),
+    description: t5(
+      "Retouche professionnelle de photos : détourage, correction colorimétrique, suppression d'arrière-plan, embellissement.",
+      "Professional photo retouching: cutout, color correction, background removal, enhancement.",
+    ),
+    features: tl(
+      ["Détourage HD", "Correction couleurs", "Arrière-plan transparent", "Livraison rapide"],
+      ["HD cutout", "Color correction", "Transparent background", "Fast delivery"],
+    ),
+    priceFrom: 3000,
+  },
+
+  // ---------- NOUVEAUX PRODUITS WEB ----------
+  {
+    slug: "site-immobilier",
+    category: "web",
+    image: imgVitrine,
+    name: t5("Site Immobilier", "Real Estate Website"),
+    short: t5("Plateforme pour agences et promoteurs immobiliers.", "Platform for real estate agencies and developers."),
+    description: t5(
+      "Site immobilier complet : catalogue de biens, filtres avancés, galerie photos, formulaire de visite, espace agent.",
+      "Full real estate site: listings, advanced filters, photo galleries, viewing form, agent area.",
+    ),
+    features: tl(
+      ["Catalogue de biens", "Filtres avancés", "Galerie & visite virtuelle", "Espace agent", "Multi-langues"],
+      ["Listings catalog", "Advanced filters", "Gallery & virtual tour", "Agent area", "Multi-language"],
+    ),
+    priceFrom: 400000,
+  },
+  {
+    slug: "site-restaurant",
+    category: "web",
+    image: imgVitrine,
+    name: t5("Site Restaurant & Réservation", "Restaurant & Booking Website"),
+    short: t5("Site avec menu, réservation et commande en ligne.", "Site with menu, booking and online ordering."),
+    description: t5(
+      "Site web pour restaurants : menu digital, système de réservation de table et commande en ligne avec paiement Mobile Money.",
+      "Restaurant website: digital menu, table booking and online ordering with Mobile Money payment.",
+    ),
+    features: tl(
+      ["Menu digital", "Réservation en ligne", "Commande & livraison", "Paiement Mobile Money"],
+      ["Digital menu", "Online booking", "Order & delivery", "Mobile Money payment"],
+    ),
+    priceFrom: 220000,
+  },
+  {
+    slug: "site-ecole-formation",
+    category: "web",
+    image: imgDashboard,
+    name: t5("Site École / Formation en ligne", "School / E-learning Site"),
+    short: t5("Plateforme de cours en ligne avec espace élève.", "E-learning platform with student area."),
+    description: t5(
+      "Plateforme de formation en ligne : catalogue de cours, inscriptions, espace élève, suivi de progression, certificats.",
+      "E-learning platform: course catalog, enrollment, student area, progress tracking, certificates.",
+    ),
+    features: tl(
+      ["Catalogue de cours", "Espace élève", "Vidéos & quiz", "Certificats PDF", "Paiement intégré"],
+      ["Course catalog", "Student area", "Videos & quizzes", "PDF certificates", "Integrated payment"],
+    ),
+    priceFrom: 450000,
+  },
+  {
+    slug: "application-mobile",
+    category: "web",
+    image: imgSaas,
+    name: t5("Application Mobile (iOS & Android)", "Mobile App (iOS & Android)"),
+    short: t5("App mobile cross-platform pour votre activité.", "Cross-platform mobile app for your business."),
+    description: t5(
+      "Développement d'application mobile cross-platform (iOS + Android) sur mesure, publication sur App Store et Google Play.",
+      "Custom cross-platform mobile app (iOS + Android), published to App Store and Google Play.",
+    ),
+    features: tl(
+      ["iOS + Android", "Notifications push", "Auth & profils", "Publication stores incluse"],
+      ["iOS + Android", "Push notifications", "Auth & profiles", "Store publication included"],
+    ),
+    priceFrom: 900000,
+  },
+  {
+    slug: "refonte-site-web",
+    category: "web",
+    image: imgVitrine,
+    name: t5("Refonte de Site Web", "Website Redesign"),
+    short: t5("Modernisez votre site existant, sans repartir de zéro.", "Modernize your existing site without starting over."),
+    description: t5(
+      "Audit complet de votre site actuel puis refonte design + technique pour le rendre moderne, rapide et mobile-friendly.",
+      "Full audit of your current site then design + technical redesign — modern, fast, mobile-friendly.",
+    ),
+    features: tl(
+      ["Audit UX/SEO", "Nouveau design", "Migration contenu", "Optimisation vitesse", "Responsive"],
+      ["UX/SEO audit", "New design", "Content migration", "Speed optimization", "Responsive"],
+    ),
+    priceFrom: 180000,
+  },
+  {
+    slug: "maintenance-site",
+    category: "web",
+    image: imgDashboard,
+    name: t5("Maintenance & Hébergement", "Maintenance & Hosting"),
+    short: t5("Votre site à jour, sécurisé et toujours en ligne.", "Your site up-to-date, secure and always online."),
+    description: t5(
+      "Forfait mensuel de maintenance : mises à jour, sauvegardes, sécurité, hébergement, support technique et petites modifications.",
+      "Monthly maintenance plan: updates, backups, security, hosting, tech support and small edits.",
+    ),
+    features: tl(
+      ["Sauvegardes hebdo", "Mises à jour sécurité", "Hébergement inclus", "Support prioritaire", "2h de modifs/mois"],
+      ["Weekly backups", "Security updates", "Hosting included", "Priority support", "2h edits/month"],
+    ),
+    priceFrom: 25000,
+  },
+  {
+    slug: "seo-referencement",
+    category: "web",
+    image: imgIA,
+    name: t5("SEO & Référencement Google", "SEO & Google Ranking"),
+    short: t5("Apparaissez en première page de Google.", "Get to Google's first page."),
+    description: t5(
+      "Optimisation SEO complète de votre site : audit, mots-clés, contenu, vitesse, backlinks pour grimper dans Google.",
+      "Full SEO optimization: audit, keywords, content, speed, backlinks to climb Google rankings.",
+    ),
+    features: tl(
+      ["Audit SEO complet", "30 mots-clés ciblés", "Optimisation on-page", "Rapport mensuel", "Google Analytics"],
+      ["Full SEO audit", "30 target keywords", "On-page optimization", "Monthly report", "Google Analytics"],
+    ),
+    priceFrom: 75000,
+  },
 ];
 
 export const getProduct = (slug: string) => PRODUCTS.find((p) => p.slug === slug);
