@@ -4,14 +4,14 @@ import { Logo } from "@/components/brand/Logo";
 import { useI18n } from "@/lib/i18n";
 
 const SERVICES = [
-  "Développement Web",
-  "Développement Mobile",
-  "Intelligence Artificielle",
-  "Cybersécurité",
-  "Cloud & Hébergement",
-  "UI/UX Design",
-  "Maintenance Informatique",
-  "Affiche & Graphisme",
+  "Identité visuelle & logo",
+  "Sites web sur mesure",
+  "Applications mobiles",
+  "E-commerce & catalogues",
+  "Design print & packaging",
+  "Motion & contenus vidéo",
+  "Conseil & stratégie digitale",
+  "Maintenance & hébergement",
 ];
 
 export function Footer() {
@@ -22,8 +22,8 @@ export function Footer() {
         <div className="md:col-span-5">
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Eurisstech — Innovating the Digital Future. Solutions innovantes en développement web,
-            intelligence artificielle et cybersécurité.
+            Eurisstech — Studio créatif & technologique. Nous donnons une voix visuelle aux marques
+            africaines ambitieuses, du premier logo jusqu'au produit digital final.
           </p>
           <ul className="mt-6 space-y-1.5 text-sm text-muted-foreground">
             <li>📍 Calavi, Bénin</li>
@@ -81,7 +81,7 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="container-tight flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row">
           <p>© 2026 Eurisstech. {t("footer.rights")}</p>
-          <p className="uppercase tracking-widest">Développement · IA · Cybersécurité · Innovation</p>
+          <p className="uppercase tracking-widest">Pensé, dessiné et codé à Calavi, Bénin</p>
         </div>
       </div>
     </footer>

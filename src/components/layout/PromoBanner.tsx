@@ -1,10 +1,10 @@
 export function PromoBanner() {
   const items = [
-    "Innovating the Digital Future",
-    "Calavi · Bénin",
+    "Eurisstech · Studio créatif & tech",
+    "Basés à Calavi, au service de toute l'Afrique",
     "+229 01 41 67 57 84",
-    "Développement Web · Mobile · IA",
-    "Cybersécurité · Cloud · UI/UX",
+    "Branding · Web · Mobile · Conseil",
+    "Devis gratuit sous 24h",
     "fanoueuriss@gmail.com",
   ];
 
