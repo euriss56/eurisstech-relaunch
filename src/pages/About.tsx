@@ -18,14 +18,14 @@ function About() {
         <div className="container mx-auto px-4 py-20 sm:py-28">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-              <Sparkles className="h-3.5 w-3.5" /> À propos de nous
+              <Sparkles className="h-3.5 w-3.5" /> Notre histoire
             </span>
             <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-6xl">
-              Nous bâtissons des marques qui <span className="text-primary">performent</span>.
+              Une équipe béninoise au service des marques qui <span className="text-primary">osent</span>.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-              Eurisstech est un studio de création digitale basé à Cotonou, dédié aux
-              entrepreneurs et entreprises qui veulent une identité forte et un web qui convertit.
+              Eurisstech est né d'une conviction simple : les entrepreneurs africains méritent des outils
+              créatifs et digitaux du même niveau que les plus grands studios du monde — sans le tarif qui va avec.
             </p>
           </div>
         </div>
@@ -56,21 +56,21 @@ function About() {
             </p>
             <div className="mt-6 space-y-4 text-foreground/80">
               <p>
-                Passionné par le design, la technologie et l'entrepreneuriat,
+                Designer dans l'âme, développeur par passion et entrepreneur par vocation,
                 <span className="font-semibold text-foreground"> Euriss Mahunan FANOU </span>
-                a fondé Eurisstech avec une conviction simple : chaque entreprise mérite une
-                image professionnelle et des outils digitaux à la hauteur de ses ambitions.
+                a lancé Eurisstech pour combler un manque qu'il observait chaque jour autour de lui :
+                trop de belles idées entravées par une image faible et des outils digitaux dépassés.
               </p>
               <p>
-                Sa philosophie tient en quatre mots :{" "}
+                Sa méthode tient en une phrase :{" "}
                 <span className="font-semibold text-foreground">
-                  Focus. Plan. Execute. Succeed.
+                  écouter, simplifier, livrer, et recommencer mieux.
                 </span>{" "}
-                C'est cette discipline qui guide chaque projet livré par l'équipe.
+                Une exigence qui irrigue chaque projet, du plus modeste au plus stratégique.
               </p>
               <blockquote className="rounded-xl border-l-4 border-primary bg-surface p-5 italic text-foreground/90 shadow-card">
-                « Le succès se construit sur la discipline et la constance. Notre mission
-                est de donner à chaque marque les moyens de briller. »
+                « Une marque forte, ce n'est pas un luxe — c'est un raccourci vers la confiance.
+                Notre rôle est de fabriquer ce raccourci, projet après projet. »
               </blockquote>
             </div>
           </div>
@@ -82,28 +82,28 @@ function About() {
         <div className="container mx-auto px-4 py-20">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Ce qui nous fait avancer
+              Notre boussole au quotidien
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Trois piliers qui définissent notre manière de travailler avec nos clients.
+              Trois principes qui guident chaque décision, chaque maquette, chaque ligne de code.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
                 Icon: Target,
-                title: "Notre Mission",
-                desc: "Offrir à chaque entreprise du Bénin et d'Afrique des créations graphiques et des sites web professionnels, accessibles et performants.",
+                title: "Notre mission",
+                desc: "Rendre le design et la tech de haut niveau accessibles aux entrepreneurs et PME africaines — sans jargon, sans surfacturation.",
               },
               {
                 Icon: Eye,
-                title: "Notre Vision",
-                desc: "Devenir la référence en design et solutions digitales pour les marques ambitieuses, en alliant créativité locale et standards internationaux.",
+                title: "Notre vision",
+                desc: "Faire émerger une nouvelle génération de marques africaines reconnaissables à leur soin, leur clarté et leur ambition internationale.",
               },
               {
                 Icon: Heart,
-                title: "Nos Valeurs",
-                desc: "Excellence, transparence, écoute et engagement. Chaque projet est traité avec le sérieux qu'il mérite.",
+                title: "Nos valeurs",
+                desc: "Honnêteté radicale, livraison qui tient ses promesses, et un respect total du temps et du budget de chaque client.",
               },
             ].map(({ Icon, title, desc }) => (
               <div
@@ -125,10 +125,10 @@ function About() {
       <section className="container mx-auto px-4 py-20">
         <div className="mx-auto max-w-2xl text-center">
           <span className="text-xs font-semibold uppercase tracking-wider text-primary">
-            Nos locaux
+            L'atelier
           </span>
           <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
-            Un cadre pensé pour la création
+            Là où vos projets prennent forme
           </h2>
         </div>
         <div className="mt-10">
@@ -146,9 +146,9 @@ function About() {
       <section className="border-y border-border bg-surface/60">
         <div className="container mx-auto grid gap-8 px-4 py-14 sm:grid-cols-3">
           {[
-            { Icon: Award, value: "100+", label: "Projets livrés" },
-            { Icon: Users, value: "80+", label: "Clients satisfaits" },
-            { Icon: Sparkles, value: "5★", label: "Qualité reconnue" },
+            { Icon: Award, value: "100+", label: "Projets menés à terme" },
+            { Icon: Users, value: "80+", label: "Marques accompagnées" },
+            { Icon: Sparkles, value: "5★", label: "Note moyenne client" },
           ].map(({ Icon, value, label }) => (
             <div key={label} className="flex items-center gap-4">
               <span className="grid h-14 w-14 place-items-center rounded-2xl gradient-primary text-primary-foreground shadow-card">
@@ -167,20 +167,20 @@ function About() {
       <section className="container mx-auto px-4 py-20">
         <div className="overflow-hidden rounded-3xl border border-border bg-card p-10 text-center shadow-elegant sm:p-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Prêt à construire votre marque avec nous&nbsp;?
+            Et si votre prochaine marque, on la construisait ensemble&nbsp;?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Discutons de votre projet — devis gratuit sous 24h.
+            Un brief, un café virtuel, un devis clair sous 24h — c'est par là que tout commence.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <Link to="/contact">
               <Button size="lg" className="gradient-primary text-primary-foreground glow-primary">
-                Nous contacter <ArrowRight className="ml-2 h-4 w-4" />
+                Démarrer la conversation <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Link to="/shop">
               <Button size="lg" variant="outline">
-                Voir nos services
+                Voir nos prestations
               </Button>
             </Link>
           </div>
