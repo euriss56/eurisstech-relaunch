@@ -18,14 +18,14 @@ function About() {
         <div className="container mx-auto px-4 py-20 sm:py-28">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-              <Sparkles className="h-3.5 w-3.5" /> À propos de nous
+              <Sparkles className="h-3.5 w-3.5" /> Notre histoire
             </span>
             <h1 className="mt-5 text-4xl font-bold tracking-tight sm:text-6xl">
-              Nous bâtissons des marques qui <span className="text-primary">performent</span>.
+              Une équipe béninoise au service des marques qui <span className="text-primary">osent</span>.
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-              Eurisstech est un studio de création digitale basé à Cotonou, dédié aux
-              entrepreneurs et entreprises qui veulent une identité forte et un web qui convertit.
+              Eurisstech est né d'une conviction simple : les entrepreneurs africains méritent des outils
+              créatifs et digitaux du même niveau que les plus grands studios du monde — sans le tarif qui va avec.
             </p>
           </div>
         </div>

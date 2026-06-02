@@ -29,7 +29,7 @@ function Home() {
         <div className="container relative mx-auto px-4 py-24 sm:py-32 md:py-40">
           <motion.div initial="hidden" animate="show" variants={fadeUp} className="mx-auto max-w-4xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
-              <Sparkles className="h-3.5 w-3.5 text-primary" /> Bénin · Studio digital
+              <Sparkles className="h-3.5 w-3.5 text-primary" /> Eurisstech · Studio créatif & tech à Calavi
             </span>
             <h1 className="mt-6 text-4xl font-extrabold leading-[1.05] tracking-tight text-gradient sm:text-6xl md:text-7xl">
               {t("hero.title")}
@@ -52,9 +52,9 @@ function Home() {
 
             <div className="mx-auto mt-14 grid max-w-3xl grid-cols-3 gap-2 sm:gap-6">
               {[
-                { Icon: Zap, label: "Livraison express" },
-                { Icon: ShieldCheck, label: "Qualité pro" },
-                { Icon: Globe2, label: "Multilingue" },
+                { Icon: Zap, label: "Devis sous 24h" },
+                { Icon: ShieldCheck, label: "Engagement qualité" },
+                { Icon: Globe2, label: "FR · EN · ES · DE · ZH" },
               ].map(({ Icon, label }, i) => (
                 <motion.div key={label} custom={i + 2} initial="hidden" animate="show" variants={fadeUp}
                   className="glass flex flex-col items-center gap-2 rounded-xl p-4 text-center">
@@ -151,8 +151,8 @@ function Home() {
           <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/70 to-background/90" />
           <div className="absolute inset-0 gradient-radial-primary opacity-40" />
           <div className="relative">
-            <h2 className="text-3xl font-bold sm:text-4xl">Prêt à élever votre marque ?</h2>
-            <p className="mx-auto mt-3 max-w-xl text-muted-foreground">Discutons de votre projet et obtenez un devis sous 24h.</p>
+            <h2 className="text-3xl font-bold sm:text-4xl">Et si on donnait vie à votre prochain projet&nbsp;?</h2>
+            <p className="mx-auto mt-3 max-w-xl text-muted-foreground">Un échange clair, un devis honnête, une équipe qui s'engage. On vous répond sous 24h.</p>
             <Link to="/contact" className="mt-7 inline-flex">
               <Button size="lg" className="gradient-primary text-primary-foreground glow-primary">
                 {t("hero.cta2")} <ArrowRight className="ml-2 h-4 w-4" />
