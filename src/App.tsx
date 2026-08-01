@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { RouteSeo } from "@/components/RouteSeo";
 import { PromoBanner } from "@/components/layout/PromoBanner";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
