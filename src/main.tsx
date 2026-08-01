@@ -15,19 +15,21 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <ThemeProvider>
-          <I18nProvider>
-            <AuthProvider>
-              <CartProvider>
-                <App />
-                <Toaster />
-              </CartProvider>
-            </AuthProvider>
-          </I18nProvider>
-        </ThemeProvider>
-      </BrowserRouter>
-    </QueryClientProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <ThemeProvider>
+            <I18nProvider>
+              <AuthProvider>
+                <CartProvider>
+                  <App />
+                  <Toaster />
+                </CartProvider>
+              </AuthProvider>
+            </I18nProvider>
+          </ThemeProvider>
+        </BrowserRouter>
+      </QueryClientProvider>
+    </HelmetProvider>
   </StrictMode>,
 );
