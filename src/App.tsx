@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { RouteSeo } from "@/components/RouteSeo";
 import { PromoBanner } from "@/components/layout/PromoBanner";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -30,6 +31,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <div className="relative flex min-h-dvh flex-col">
+      <RouteSeo />
       <ScrollToTop />
       <PromoBanner />
       <Navbar />
