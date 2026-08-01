@@ -90,7 +90,7 @@ function Checkout() {
         `Paiement : ${active.label}%0A` +
         `Numéro destinataire : ${active.number}%0A` +
         `Référence transaction : ${reference}`;
-      window.open(`https://wa.me/2290145764494?text=${msg}`, "_blank", "noopener,noreferrer");
+      window.open(`https://wa.me/2290141675784?text=${msg}`, "_blank", "noopener,noreferrer");
 
       toast.success("Commande envoyée. Nous vérifions votre paiement.");
       clear();

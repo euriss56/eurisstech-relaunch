@@ -72,7 +72,7 @@ function ShopDetail() {
               {t("product.order")}
             </Button>
             <a
-              href={`https://wa.me/2290145764494?text=${encodeURIComponent(`Bonjour, je suis intéressé par : ${product.name.fr}`)}`}
+              href={`https://wa.me/2290141675784?text=${encodeURIComponent(`Bonjour, je suis intéressé par : ${product.name.fr}`)}`}
               target="_blank" rel="noopener noreferrer"
             >
               <Button size="lg" variant="outline" className="border-border bg-surface">WhatsApp</Button>

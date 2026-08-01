@@ -38,7 +38,7 @@ function Contact() {
       });
       setForm({ name: "", email: "", phone: "", message: "" });
     }
-    const url = `https://wa.me/2290146379989?text=${encodeURIComponent(
+    const url = `https://wa.me/2290141675784?text=${encodeURIComponent(
       `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nMessage: ${message}`,
     )}`;
     window.open(url, "_blank", "noopener,noreferrer");
