@@ -31,6 +31,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <div className="relative flex min-h-dvh flex-col">
+      <RouteSeo />
       <ScrollToTop />
       <PromoBanner />
       <Navbar />
