@@ -88,13 +88,17 @@ function AuthForms() {
         </div>
 
         <div className="rounded-2xl border border-border bg-surface p-6">
-          <Button type="button" onClick={handleGoogle} disabled={busy} variant="outline" className="w-full gap-2 border-border bg-background hover:bg-surface-elevated">
-            <GoogleIcon /> Continuer avec Google
-          </Button>
+          {googleAvailable && (
+            <>
+              <Button type="button" onClick={handleGoogle} disabled={busy} variant="outline" className="w-full gap-2 border-border bg-background hover:bg-surface-elevated">
+                <GoogleIcon /> Continuer avec Google
+              </Button>
 
-          <div className="my-5 flex items-center gap-3 text-xs text-muted-foreground">
-            <div className="h-px flex-1 bg-border" /> ou <div className="h-px flex-1 bg-border" />
-          </div>
+              <div className="my-5 flex items-center gap-3 text-xs text-muted-foreground">
+                <div className="h-px flex-1 bg-border" /> ou <div className="h-px flex-1 bg-border" />
+              </div>
+            </>
+          )}
 
           <Tabs defaultValue="login">
             <TabsList className="grid w-full grid-cols-2">
