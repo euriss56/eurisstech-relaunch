@@ -9,6 +9,8 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable";
 import { useAuth } from "@/lib/auth";
+import { useIsAdmin } from "@/lib/useIsAdmin";
+import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { formatXOF } from "@/lib/products";
 
