@@ -37,7 +37,15 @@ function AuthForms() {
   const [login, setLogin] = useState({ email: "", password: "" });
   const [reg, setReg] = useState({ name: "", email: "", password: "" });
 
+  const host = typeof window !== "undefined" ? window.location.hostname : "";
+  const googleAvailable =
+    host === "localhost" || host === "127.0.0.1" || host.endsWith(".lovable.app") || host.endsWith(".lovable.dev");
+
   const handleGoogle = async () => {
+    if (!googleAvailable) {
+      toast.error("Connexion Google indisponible sur ce domaine. Utilisez l'email et le mot de passe.");
+      return;
+    }
     setBusy(true);
     try {
       const r = await lovable.auth.signInWithOAuth("google", { redirect_uri: window.location.origin + "/account" });
