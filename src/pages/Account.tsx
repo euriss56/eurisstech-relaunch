@@ -138,6 +138,7 @@ interface OrderRow {
 
 function Dashboard({ onSignOut }: { onSignOut: () => Promise<void> }) {
   const { user } = useAuth();
+  const { isAdmin } = useIsAdmin();
   const { data: orders } = useQuery({
     queryKey: ["my-orders", user?.id],
     enabled: !!user,

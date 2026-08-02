@@ -13,6 +13,7 @@ import ShopDetail from "@/pages/ShopDetail";
 import Cart from "@/pages/Cart";
 import Checkout from "@/pages/Checkout";
 import Account from "@/pages/Account";
+import Admin from "@/pages/Admin";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import MentionsLegales from "@/pages/MentionsLegales";
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/account" element={<Account />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
