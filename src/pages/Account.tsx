@@ -165,7 +165,14 @@ function Dashboard({ onSignOut }: { onSignOut: () => Promise<void> }) {
             <h1 className="mt-4 text-3xl font-bold">Bonjour {user?.user_metadata?.full_name ?? user?.email}</h1>
             <p className="mt-1 text-sm text-muted-foreground">{user?.email}</p>
           </div>
-          <Button variant="outline" onClick={onSignOut} className="border-border bg-surface"><LogOut className="mr-2 h-4 w-4" /> Déconnexion</Button>
+          <div className="flex flex-wrap justify-end gap-2">
+            {isAdmin && (
+              <Button asChild className="gradient-primary text-primary-foreground">
+                <Link to="/admin">Administration</Link>
+              </Button>
+            )}
+            <Button variant="outline" onClick={onSignOut} className="border-border bg-surface"><LogOut className="mr-2 h-4 w-4" /> Déconnexion</Button>
+          </div>
         </div>
 
         <h2 className="mt-12 text-xl font-semibold">Mes commandes</h2>
