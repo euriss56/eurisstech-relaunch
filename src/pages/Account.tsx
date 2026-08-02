@@ -37,7 +37,15 @@ function AuthForms() {
   const [login, setLogin] = useState({ email: "", password: "" });
   const [reg, setReg] = useState({ name: "", email: "", password: "" });
 
+  const host = typeof window !== "undefined" ? window.location.hostname : "";
+  const googleAvailable =
+    host === "localhost" || host === "127.0.0.1" || host.endsWith(".lovable.app") || host.endsWith(".lovable.dev");
+
   const handleGoogle = async () => {
+    if (!googleAvailable) {
+      toast.error("Connexion Google indisponible sur ce domaine. Utilisez l'email et le mot de passe.");
+      return;
+    }
     setBusy(true);
     try {
       const r = await lovable.auth.signInWithOAuth("google", { redirect_uri: window.location.origin + "/account" });
@@ -80,13 +88,17 @@ function AuthForms() {
         </div>
 
         <div className="rounded-2xl border border-border bg-surface p-6">
-          <Button type="button" onClick={handleGoogle} disabled={busy} variant="outline" className="w-full gap-2 border-border bg-background hover:bg-surface-elevated">
-            <GoogleIcon /> Continuer avec Google
-          </Button>
+          {googleAvailable && (
+            <>
+              <Button type="button" onClick={handleGoogle} disabled={busy} variant="outline" className="w-full gap-2 border-border bg-background hover:bg-surface-elevated">
+                <GoogleIcon /> Continuer avec Google
+              </Button>
 
-          <div className="my-5 flex items-center gap-3 text-xs text-muted-foreground">
-            <div className="h-px flex-1 bg-border" /> ou <div className="h-px flex-1 bg-border" />
-          </div>
+              <div className="my-5 flex items-center gap-3 text-xs text-muted-foreground">
+                <div className="h-px flex-1 bg-border" /> ou <div className="h-px flex-1 bg-border" />
+              </div>
+            </>
+          )}
 
           <Tabs defaultValue="login">
             <TabsList className="grid w-full grid-cols-2">
