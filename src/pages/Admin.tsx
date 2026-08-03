@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { ShieldCheck } from "lucide-react";
+import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/auth";
 import { useIsAdmin } from "@/lib/useIsAdmin";
 import { formatXOF } from "@/lib/products";
+import { BlogManager } from "@/components/admin/BlogManager";
+import { ORDER_STATUSES, orderStatusLabel, orderStatusClass } from "@/lib/orderStatus";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 
 interface MessageRow {
   id: string;
@@ -53,6 +58,21 @@ export default function Admin() {
       return data as OrderRow[];
     },
   });
+
+  const qc = useQueryClient();
+  const updateStatus = useMutation({
+    mutationFn: async ({ id, status }: { id: string; status: string }) => {
+      const { error } = await supabase.from("orders").update({ status }).eq("id", id);
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      toast.success("Statut mis à jour");
+      qc.invalidateQueries({ queryKey: ["admin-orders"] });
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+
 
   if (loading || roleLoading) {
     return <div className="container mx-auto px-4 py-20 text-center text-muted-foreground">Chargement…</div>;
@@ -112,14 +132,31 @@ export default function Admin() {
                   <p className="font-semibold">#{o.id.slice(0, 8)} — {o.customer_name ?? "—"}</p>
                   <p className="text-xs text-muted-foreground">{o.customer_phone} · {new Date(o.created_at).toLocaleString("fr-FR")}</p>
                 </div>
-                <div className="text-right">
-                  <span className="inline-flex rounded-full border border-border bg-background px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">{o.status}</span>
-                  <p className="mt-1 font-bold text-primary">{formatXOF(o.total)}</p>
+                <div className="flex items-center gap-3">
+                  <span className={`inline-flex rounded-full border px-2.5 py-0.5 text-[10px] uppercase tracking-wide ${orderStatusClass(o.status)}`}>
+                    {orderStatusLabel(o.status)}
+                  </span>
+                  <p className="font-bold text-primary">{formatXOF(o.total)}</p>
+                  <Select value={o.status} onValueChange={(v) => updateStatus.mutate({ id: o.id, status: v })}>
+                    <SelectTrigger className="w-40 border-border bg-background">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {ORDER_STATUSES.map((s) => (
+                        <SelectItem key={s} value={s}>{orderStatusLabel(s)}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
             ))}
           </div>
         )}
+
+        <div className="mt-12">
+          <BlogManager />
+        </div>
+
       </div>
     </div>
   );
