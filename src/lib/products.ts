@@ -473,6 +473,39 @@ export const PRODUCTS: Product[] = [
     ),
     priceFrom: 3000,
   },
+  {
+    slug: "revetement-pc",
+    category: "graphic",
+    image: imgRevetementPc,
+    name: t5("Revêtement PC (Skin Ordinateur)", "Laptop Skin / Wrap"),
+    short: t5("Habillez votre ordinateur aux couleurs de votre marque.", "Wrap your laptop in your brand colors."),
+    description: t5(
+      "Conception et pose de revêtement adhésif (skin) pour ordinateurs portables et de bureau : protection contre les rayures et personnalisation totale avec votre design ou votre identité de marque.",
+      "Design and application of adhesive skins for laptops and desktops: scratch protection plus full customization with your design or brand identity.",
+    ),
+    features: tl(
+      ["Design personnalisé ou motif au choix", "Vinyle de qualité, sans résidu", "Découpe adaptée à votre modèle", "Pose sur place à Calavi"],
+      ["Custom design or ready-made patterns", "Residue-free quality vinyl", "Cut to fit your exact model", "On-site application in Calavi"],
+    ),
+    priceFrom: 7000,
+  },
+  {
+    slug: "revetement-pc-entreprise",
+    category: "graphic",
+    image: imgRevetementPc,
+    name: t5("Revêtement PC — Pack Entreprise", "Laptop Skins — Business Pack"),
+    short: t5("Un parc informatique aux couleurs de votre société.", "Brand your whole computer fleet."),
+    description: t5(
+      "Habillage en série des ordinateurs de votre équipe : même design, logo et couleurs sur tout le parc, pour une image professionnelle homogène.",
+      "Batch skinning for your team's computers: same design, logo and colors across the fleet for a consistent professional image.",
+    ),
+    features: tl(
+      ["À partir de 5 ordinateurs", "Design unique validé avant production", "Tarif dégressif", "Pose incluse"],
+      ["From 5 computers", "Single approved design", "Volume discount", "Application included"],
+    ),
+    priceFrom: 30000,
+  },
+
 
   // ---------- NOUVEAUX PRODUITS WEB ----------
   {
