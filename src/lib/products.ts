@@ -20,6 +20,7 @@ import imgBlog from "@/assets/services/blog-site.jpg";
 import imgSaas from "@/assets/services/saas.jpg";
 import imgDashboard from "@/assets/services/dashboard.jpg";
 import imgIA from "@/assets/services/ia.jpg";
+import imgRevetementPc from "@/assets/services/revetement-pc.jpg";
 
 export type Category = "graphic" | "web";
 
