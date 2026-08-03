@@ -190,15 +190,32 @@ function Dashboard({ onSignOut }: { onSignOut: () => Promise<void> }) {
                     <p className="mt-1 font-semibold">#{o.id.slice(0, 8)}</p>
                   </div>
                   <div className="text-right">
-                    <span className="inline-flex rounded-full border border-border bg-background px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">{o.status}</span>
+                    <span className={`inline-flex rounded-full border px-2.5 py-0.5 text-[10px] uppercase tracking-wide ${orderStatusClass(o.status)}`}>{orderStatusLabel(o.status)}</span>
                     <p className="mt-1 font-bold text-primary">{formatXOF(o.total)}</p>
                   </div>
                 </div>
+                {o.status !== "cancelled" && (
+                  <div className="mt-4 flex items-center gap-1.5">
+                    {ORDER_STEPS.map((s, i) => {
+                      const current = ORDER_STEPS.indexOf(o.status as (typeof ORDER_STEPS)[number]);
+                      const done = current >= i && current !== -1;
+                      return (
+                        <div key={s} className="flex-1">
+                          <div className={`h-1 rounded-full ${done ? "bg-primary" : "bg-border"}`} />
+                          <p className={`mt-1.5 text-[10px] uppercase tracking-wide ${done ? "text-primary" : "text-muted-foreground"}`}>
+                            {orderStatusLabel(s)}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
                 <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
                   {o.order_items.map((it, i) => (
                     <li key={i}>• {it.product_name} × {it.qty} — {formatXOF(it.unit_price * it.qty)}</li>
                   ))}
                 </ul>
+
               </div>
             ))}
           </div>
