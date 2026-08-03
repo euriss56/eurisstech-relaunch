@@ -59,6 +59,21 @@ export default function Admin() {
     },
   });
 
+  const qc = useQueryClient();
+  const updateStatus = useMutation({
+    mutationFn: async ({ id, status }: { id: string; status: string }) => {
+      const { error } = await supabase.from("orders").update({ status }).eq("id", id);
+      if (error) throw error;
+    },
+    onSuccess: () => {
+      toast.success("Statut mis à jour");
+      qc.invalidateQueries({ queryKey: ["admin-orders"] });
+    },
+    onError: (e: Error) => toast.error(e.message),
+  });
+
+
+
   if (loading || roleLoading) {
     return <div className="container mx-auto px-4 py-20 text-center text-muted-foreground">Chargement…</div>;
   }
