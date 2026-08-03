@@ -132,14 +132,31 @@ export default function Admin() {
                   <p className="font-semibold">#{o.id.slice(0, 8)} — {o.customer_name ?? "—"}</p>
                   <p className="text-xs text-muted-foreground">{o.customer_phone} · {new Date(o.created_at).toLocaleString("fr-FR")}</p>
                 </div>
-                <div className="text-right">
-                  <span className="inline-flex rounded-full border border-border bg-background px-2.5 py-0.5 text-[10px] uppercase tracking-wide text-muted-foreground">{o.status}</span>
-                  <p className="mt-1 font-bold text-primary">{formatXOF(o.total)}</p>
+                <div className="flex items-center gap-3">
+                  <span className={`inline-flex rounded-full border px-2.5 py-0.5 text-[10px] uppercase tracking-wide ${orderStatusClass(o.status)}`}>
+                    {orderStatusLabel(o.status)}
+                  </span>
+                  <p className="font-bold text-primary">{formatXOF(o.total)}</p>
+                  <Select value={o.status} onValueChange={(v) => updateStatus.mutate({ id: o.id, status: v })}>
+                    <SelectTrigger className="w-40 border-border bg-background">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {ORDER_STATUSES.map((s) => (
+                        <SelectItem key={s} value={s}>{orderStatusLabel(s)}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
               </div>
             ))}
           </div>
         )}
+
+        <div className="mt-12">
+          <BlogManager />
+        </div>
+
       </div>
     </div>
   );
