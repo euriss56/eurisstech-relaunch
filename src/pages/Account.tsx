@@ -13,6 +13,8 @@ import { useIsAdmin } from "@/lib/useIsAdmin";
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { formatXOF } from "@/lib/products";
+import { ORDER_STEPS, orderStatusClass, orderStatusLabel } from "@/lib/orderStatus";
+
 
 
 function GoogleIcon() {
