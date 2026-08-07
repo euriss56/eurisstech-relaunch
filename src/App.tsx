@@ -9,6 +9,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Shop from "@/pages/Shop";
+import Services from "@/pages/Services";
 import ShopDetail from "@/pages/ShopDetail";
 import Cart from "@/pages/Cart";
 import Checkout from "@/pages/Checkout";
@@ -41,6 +42,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/shop/:slug" element={<ShopDetail />} />
           <Route path="/cart" element={<Cart />} />

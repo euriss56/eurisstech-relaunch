@@ -15,6 +15,7 @@ export function Navbar() {
 
   const links = [
     { to: "/", label: t("nav.home"), end: true },
+    { to: "/services", label: "Services", end: false },
     { to: "/shop", label: t("nav.shop"), end: false },
     { to: "/about", label: t("nav.about"), end: false },
     { to: "/blog", label: t("nav.blog"), end: false },
