@@ -7,6 +7,11 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       "Eurisstech, studio créatif et technologique à Calavi : identité visuelle, sites web, applications mobiles et design print pour marques africaines ambitieuses.",
   },
+  "/services": {
+    title: "Réparation smartphone & ordinateur à Calavi — Eurisstech",
+    description:
+      "Réparation téléphone, iPhone, Samsung, Android et ordinateur portable à Calavi : écran, batterie, connecteur de charge, dépannage et maintenance informatique. Diagnostic gratuit.",
+  },
   "/shop": {
     title: "Services & tarifs — Eurisstech",
     description:
