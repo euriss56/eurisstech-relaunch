@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Code2, Palette, Zap, ShieldCheck, Globe2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
+import { RepairSection } from "@/components/home/RepairSection";
 import { PRODUCTS, formatXOF } from "@/lib/products";
 import heroBg from "@/assets/hero-bg-light.jpg";
 import catGraphic from "@/assets/cat-graphic.jpg";
@@ -161,6 +162,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <RepairSection />
     </>
   );
 }
