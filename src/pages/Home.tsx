@@ -22,7 +22,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <img loading="lazy" decoding="async" src={heroBg} alt="" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover opacity-30" />
+        <img loading="eager" fetchPriority="high" decoding="async" src={heroBg} alt="" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background" />
         <div className="absolute inset-x-0 top-0 h-[600px] gradient-radial-primary opacity-50" />
 
