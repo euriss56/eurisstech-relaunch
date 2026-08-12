@@ -7,7 +7,7 @@ import { PRODUCTS, formatXOF } from "@/lib/products";
 import heroBg from "@/assets/hero-bg-light.jpg";
 import catGraphic from "@/assets/cat-graphic.jpg";
 import catWeb from "@/assets/cat-web.jpg";
-import buildingAerial from "@/assets/building-aerial.jpg";
+import ctaBg from "@/assets/cta-bg.jpg";
 
 
 function Home() {
