@@ -7,7 +7,7 @@ import { PRODUCTS, formatXOF } from "@/lib/products";
 import heroBg from "@/assets/hero-bg-light.jpg";
 import catGraphic from "@/assets/cat-graphic.jpg";
 import catWeb from "@/assets/cat-web.jpg";
-import buildingAerial from "@/assets/building-aerial.jpg";
+import ctaBg from "@/assets/cta-bg.jpg";
 
 
 function Home() {
@@ -147,7 +147,7 @@ function Home() {
       {/* CTA */}
       <section className="container mx-auto px-4 py-20">
         <div className="relative overflow-hidden rounded-3xl border border-border p-10 text-center md:p-16">
-          <img src={buildingAerial} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+          <img src={ctaBg} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/70 to-background/90" />
           <div className="absolute inset-0 gradient-radial-primary opacity-40" />
           <div className="relative">
