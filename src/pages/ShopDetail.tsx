@@ -11,12 +11,12 @@ import { toast } from "sonner";
 
 function ShopDetail() {
   const params = useParams<{ slug: string }>();
-  const product = getProduct(params.slug!);
+  const { t, lang } = useI18n();
+  const { add } = useCart();
+  const product = getProduct(params.slug);
   if (!product) {
     return <div className="container-tight py-20 text-center"><h1 className="text-2xl font-bold">Produit introuvable</h1></div>;
   }
-  const { t, lang } = useI18n();
-  const { add } = useCart();
 
   return (
     <div className="container mx-auto px-4 py-12">
