@@ -150,6 +150,7 @@ function Dashboard({ onSignOut }: { onSignOut: () => Promise<void> }) {
       const { data, error } = await supabase
         .from("orders")
         .select("id,status,total,currency,created_at,order_items(product_name,qty,unit_price)")
+        .eq("user_id", user!.id)
         .order("created_at", { ascending: false });
       if (error) throw error;
       return data as OrderRow[];
