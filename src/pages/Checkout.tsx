@@ -57,38 +57,23 @@ function Checkout() {
     setLoading(true);
     try {
       if (user) {
-        const { data: order, error } = await supabase
-          .from("orders")
-          .insert({
-            user_id: user.id,
-            total,
-            currency: "XOF",
-            customer_name: name,
-            customer_phone: phone,
-            payment_method: active.label,
-            payment_phone: active.number,
-            payment_reference: reference,
-            status: "pending",
-          })
-          .select("id")
-          .single();
+        const { data: orderId, error } = await supabase.rpc("create_order_with_items", {
+          _total: total,
+          _customer_name: name.trim(),
+          _customer_phone: phone.trim(),
+          _payment_method: active.label,
+          _payment_phone: active.number,
+          _payment_reference: reference.trim(),
+          _items: enriched.map((e) => ({
+            product_slug: e.product.slug,
+            product_name: e.product.name.fr,
+            qty: e.qty,
+            unit_price: e.product.priceFrom,
+          })),
+        });
 
         if (error) throw error;
-        if (order) {
-          const { error: itemsError } = await supabase.from("order_items").insert(
-            enriched.map((e) => ({
-              order_id: order.id,
-              product_slug: e.product.slug,
-              product_name: e.product.name.fr,
-              qty: e.qty,
-              unit_price: e.product.priceFrom,
-            })),
-          );
-          if (itemsError) {
-            console.error("Order created but its items could not be saved:", { orderId: order.id, itemsError });
-            throw new Error(`La commande #${order.id.slice(0, 8)} a été créée, mais ses articles n'ont pas pu être enregistrés. Contactez-nous avant de refaire le paiement.`);
-          }
-        }
+        if (!orderId) throw new Error("La commande n'a pas pu être confirmée.");
       }
 
       // Notify the team on WhatsApp with full payment info

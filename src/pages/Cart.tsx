@@ -58,7 +58,7 @@ function Cart() {
                 Payer maintenant
               </Button>
             </Link>
-            <p className="mt-2 text-center text-[11px] text-muted-foreground">Paiement Mobile Money MTN ou Moov.</p>
+            <p className="mt-2 text-center text-[11px] text-muted-foreground">Paiement Mobile Money MTN, Moov ou Celtiis.</p>
             <Link to="/shop" className="mt-3 block text-center text-xs text-muted-foreground hover:text-foreground">{t("cart.continue")}</Link>
           </aside>
         </div>
