@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
-import { Facebook, Instagram, Linkedin, Github } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { useI18n } from "@/lib/i18n";
 
 const SERVICES = [
   "Identité visuelle & logo",
   "Sites web sur mesure",
-  "Applications mobiles",
+  "Applications et plateformes",
   "E-commerce & catalogues",
-  "Design print & packaging",
-  "Motion & contenus vidéo",
+  "Design print & supports",
   "Conseil & stratégie digitale",
-  "Maintenance & hébergement",
 ];
 
 export function Footer() {
@@ -22,39 +19,24 @@ export function Footer() {
         <div className="md:col-span-5">
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Eurisstech — Studio créatif & technologique. Nous donnons une voix visuelle aux marques
-            africaines ambitieuses, du premier logo jusqu'au produit digital final.
+            EURISS TECH — Studio créatif & technologique. Nous accompagnons les marques et les
+            entrepreneurs dans la création de leur identité et de leurs solutions numériques.
           </p>
           <ul className="mt-6 space-y-1.5 text-sm text-muted-foreground">
             <li>📍 Calavi, Bénin</li>
             <li>📧 <a className="hover:text-foreground" href="mailto:fanoueuriss@gmail.com">fanoueuriss@gmail.com</a></li>
             <li>📞 <a className="hover:text-foreground" href="tel:+2290141675784">+229 01 41 67 57 84</a></li>
           </ul>
-          <div className="mt-6 flex gap-2">
-            {[
-              { Icon: Facebook, href: "#", label: "Facebook" },
-              { Icon: Linkedin, href: "#", label: "LinkedIn" },
-              { Icon: Instagram, href: "#", label: "Instagram" },
-              { Icon: Github, href: "#", label: "GitHub" },
-            ].map(({ Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="grid h-9 w-9 place-items-center border border-border bg-background text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
         </div>
 
         <div className="md:col-span-3">
-          <h4 className="text-xs font-semibold uppercase tracking-widest text-foreground">Services</h4>
+          <h4 className="text-xs font-semibold uppercase tracking-widest text-foreground">Services digitaux</h4>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-            {SERVICES.map((s) => (
-              <li key={s}><Link to="/shop" className="hover:text-foreground">{s}</Link></li>
+            {SERVICES.map((service) => (
+              <li key={service}><Link to="/services" className="hover:text-foreground">{service}</Link></li>
             ))}
+            <li><Link to="/projets" className="hover:text-foreground">Nos projets</Link></li>
+            <li><Link to="/reparation" className="hover:text-foreground">Réparation téléphone & PC</Link></li>
           </ul>
         </div>
 
@@ -80,7 +62,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="container-tight flex flex-col items-center justify-between gap-2 py-6 text-xs text-muted-foreground sm:flex-row">
-          <p>© 2026 Eurisstech. {t("footer.rights")}</p>
+          <p>© {new Date().getFullYear()} EURISS TECH. {t("footer.rights")}</p>
           <p className="uppercase tracking-widest">Pensé, dessiné et codé à Calavi, Bénin</p>
         </div>
       </div>

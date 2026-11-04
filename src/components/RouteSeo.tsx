@@ -3,55 +3,65 @@ import { Seo } from "@/components/Seo";
 
 const META: Record<string, { title: string; description: string }> = {
   "/": {
-    title: "Eurisstech — Studio créatif & tech au Bénin",
+    title: "EURISS TECH — Studio digital au Bénin",
     description:
-      "Eurisstech, studio créatif et technologique à Calavi : identité visuelle, sites web, applications mobiles et design print pour marques africaines ambitieuses.",
+      "EURISS TECH accompagne les entrepreneurs et les marques dans leur identité visuelle, la création de sites web et le développement de solutions numériques à Calavi, Bénin.",
   },
   "/services": {
-    title: "Réparation smartphone & ordinateur à Calavi — Eurisstech",
+    title: "Services digitaux — EURISS TECH",
     description:
-      "Réparation téléphone, iPhone, Samsung, Android et ordinateur portable à Calavi : écran, batterie, connecteur de charge, dépannage et maintenance informatique. Diagnostic gratuit.",
+      "Identité visuelle, design graphique, création de sites web, plateformes et solutions numériques pour les entreprises et entrepreneurs au Bénin.",
+  },
+  "/projets": {
+    title: "Projets & réalisations — EURISS TECH",
+    description:
+      "Découvrez les réalisations EURISS TECH : TraceIMEI-BJ, Aurore Capillaire et EURISS GSM, entre plateformes web, e-commerce et sites vitrines.",
+  },
+  "/reparation": {
+    title: "Réparation smartphone & ordinateur à Calavi — EURISS TECH",
+    description:
+      "Réparation de téléphones, iPhone, Samsung, Android et ordinateurs à Calavi : écrans, batteries, connecteurs, dépannage et maintenance. Diagnostic gratuit.",
   },
   "/shop": {
-    title: "Services & tarifs — Eurisstech",
+    title: "Boutique de prestations — EURISS TECH",
     description:
-      "Logos, sites vitrines, e-commerce, applications mobiles, affiches et motion design. Découvrez nos prestations et tarifs en FCFA.",
+      "Consultez les prestations et tarifs EURISS TECH : logos, identité visuelle, supports graphiques, sites vitrines et solutions e-commerce.",
   },
   "/about": {
-    title: "À propos d'Eurisstech — Notre histoire",
+    title: "À propos — EURISS TECH",
     description:
-      "Fondé par Euriss Mahunan FANOU à Calavi, Eurisstech accompagne les marques du premier logo jusqu'au produit digital final.",
+      "Découvrez EURISS TECH, studio créatif et technologique basé à Calavi, qui accompagne les marques de l'identité visuelle aux solutions numériques.",
   },
   "/blog": {
-    title: "Blog Eurisstech — Branding, web & digital",
+    title: "Blog — EURISS TECH",
     description:
-      "Conseils branding, web, réseaux sociaux et paiement mobile pour entrepreneurs au Bénin et en Afrique de l'Ouest.",
+      "Conseils et contenus autour du branding, du développement web et des solutions digitales pour entrepreneurs au Bénin.",
   },
   "/contact": {
-    title: "Contact — Eurisstech Calavi, Bénin",
+    title: "Contact — EURISS TECH, Calavi",
     description:
-      "Parlons de votre projet : écrivez à fanoueuriss@gmail.com ou appelez le +229 01 41 67 57 84. Réponse rapide, devis gratuit.",
+      "Parlons de votre projet : écrivez à fanoueuriss@gmail.com ou contactez EURISS TECH au +229 01 41 67 57 84.",
   },
-  "/cart": { title: "Panier — Eurisstech", description: "Votre sélection de services Eurisstech." },
-  "/checkout": { title: "Commande — Eurisstech", description: "Finalisez votre commande Eurisstech en toute sécurité." },
-  "/account": { title: "Mon compte — Eurisstech", description: "Accédez à vos commandes et informations Eurisstech." },
+  "/cart": { title: "Panier — EURISS TECH", description: "Retrouvez les prestations ajoutées à votre panier EURISS TECH." },
+  "/checkout": { title: "Commande — EURISS TECH", description: "Consultez les étapes de commande et de paiement de vos prestations." },
+  "/account": { title: "Mon compte — EURISS TECH", description: "Accédez à votre compte et à vos commandes EURISS TECH." },
   "/mentions-legales": {
-    title: "Mentions légales — Eurisstech",
-    description: "Mentions légales et informations éditeur du site Eurisstech.",
+    title: "Mentions légales — EURISS TECH",
+    description: "Mentions légales et informations sur l'éditeur du site EURISS TECH.",
   },
   "/privacy": {
-    title: "Politique de confidentialité — Eurisstech",
-    description: "Comment Eurisstech collecte, utilise et protège vos données personnelles.",
+    title: "Politique de confidentialité — EURISS TECH",
+    description: "Informations sur la collecte, l'utilisation et la protection de vos données personnelles.",
   },
   "/terms": {
-    title: "Conditions générales — Eurisstech",
-    description: "Conditions générales de vente et d'utilisation des services Eurisstech.",
+    title: "Conditions générales — EURISS TECH",
+    description: "Conditions générales applicables aux prestations et à l'utilisation du site EURISS TECH.",
   },
 };
 
 const FALLBACK = {
-  title: "Eurisstech — Studio créatif & technologique",
-  description: "Identité visuelle, sites web et applications mobiles conçus à Calavi, Bénin.",
+  title: "EURISS TECH — Studio créatif & technologique",
+  description: "Identité visuelle, sites web et solutions numériques conçus à Calavi, Bénin.",
 };
 
 export function RouteSeo() {

@@ -8,16 +8,20 @@ interface SeoProps {
   jsonLd?: Record<string, unknown>;
 }
 
+const SITE_URL = "https://eurisstech.vercel.app";
+
 export function Seo({ title, description, path, type = "website", jsonLd }: SeoProps) {
+  const canonicalUrl = new URL(path.startsWith("/") ? path : `/${path}`, SITE_URL).toString();
+
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={path} />
+      <link rel="canonical" href={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={path} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
