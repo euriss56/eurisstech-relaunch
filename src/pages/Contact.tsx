@@ -19,6 +19,7 @@ const schema = z.object({
 function Contact() {
   const { t } = useI18n();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [sending, setSending] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,20 +29,24 @@ function Contact() {
       return;
     }
     const { name, email, phone, message } = parsed.data;
-    const { supabase } = await import("@/integrations/supabase/client");
-    const { error } = await supabase.from("contact_messages").insert({ name, email, phone, message });
-    if (error) {
-      toast.error("Impossible d'enregistrer le message, ouverture de WhatsApp.");
-    } else {
-      toast.success("Message envoyé à fanoueuriss@gmail.com ! Nous vous répondons rapidement.", {
-        description: "Votre demande a bien été transmise à l'adresse fanoueuriss@gmail.com.",
-      });
+    setSending(true);
+    try {
+      const { supabase } = await import("@/integrations/supabase/client");
+      const { error } = await supabase.from("contact_messages").insert({ name, email, phone, message });
+      if (error) throw error;
+
+      toast.success("Votre message a bien été enregistré. Nous vous répondrons rapidement.");
       setForm({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      toast.error("Le formulaire est momentanément indisponible. WhatsApp va s'ouvrir pour envoyer votre message.");
+      const url = `https://wa.me/2290141675784?text=${encodeURIComponent(
+        `Nom : ${name}\nEmail : ${email}\nTéléphone : ${phone}\nMessage : ${message}`,
+      )}`;
+      window.location.assign(url);
+    } finally {
+      setSending(false);
     }
-    const url = `https://wa.me/2290141675784?text=${encodeURIComponent(
-      `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nMessage: ${message}`,
-    )}`;
-    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -105,8 +110,8 @@ function Contact() {
             <Label htmlFor="message">{t("contact.message")}</Label>
             <Textarea id="message" rows={6} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} maxLength={1000} required />
           </div>
-          <Button type="submit" size="lg" className="w-full gradient-primary text-primary-foreground glow-primary">
-            <Send className="mr-2 h-4 w-4" /> {t("contact.send")}
+          <Button type="submit" size="lg" disabled={sending} className="w-full gradient-primary text-primary-foreground glow-primary">
+            <Send className="mr-2 h-4 w-4" /> {sending ? "Envoi en cours…" : t("contact.send")}
           </Button>
         </form>
       </div>
