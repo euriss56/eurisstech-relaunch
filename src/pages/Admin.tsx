@@ -7,6 +7,7 @@ import { useAuth } from "@/lib/auth";
 import { useIsAdmin } from "@/lib/useIsAdmin";
 import { formatXOF } from "@/lib/products";
 import { BlogManager } from "@/components/admin/BlogManager";
+import { InvoiceManager } from "@/components/admin/InvoiceManager";
 import { ORDER_STATUSES, orderStatusLabel, orderStatusClass } from "@/lib/orderStatus";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
@@ -152,6 +153,8 @@ export default function Admin() {
             ))}
           </div>
         )}
+
+        <InvoiceManager />
 
         <div className="mt-12">
           <BlogManager />
