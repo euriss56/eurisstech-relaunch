@@ -83,8 +83,8 @@ function Contact() {
 
           <div className="overflow-hidden rounded-xl border border-border">
             <iframe
-              title="Cotonou map"
-              src="https://www.google.com/maps?q=Cotonou,Benin&output=embed"
+              title="Carte de localisation à Abomey-Calavi"
+              src="https://www.google.com/maps?q=Abomey-Calavi,Benin&output=embed"
               width="100%" height="240" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
               className="block grayscale"
             />
