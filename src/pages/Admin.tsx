@@ -92,8 +92,8 @@ export default function Admin() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <div className="mx-auto max-w-4xl">
+    <div className="container mx-auto px-4 py-10 sm:py-12">
+      <div className="mx-auto max-w-7xl">
         <div className="flex items-center gap-3">
           <div className="grid h-12 w-12 place-items-center rounded-xl gradient-primary text-primary-foreground glow-primary">
             <ShieldCheck className="h-6 w-6" />
