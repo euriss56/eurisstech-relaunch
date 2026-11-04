@@ -50,6 +50,9 @@ function Checkout() {
       toast.error("Votre panier est vide.");
       return;
     }
+    // Open a tab directly from the submit gesture so browsers do not block
+    // WhatsApp after the asynchronous database request.
+    const whatsappWindow = window.open("about:blank", "_blank");
     setLoading(true);
     try {
       if (user) {
@@ -105,7 +108,17 @@ function Checkout() {
         user ? "Compte client : commande enregistrée sur le site." : "Commande invitée : demande transmise par WhatsApp.",
       ].join("\n");
       const whatsappUrl = `https://wa.me/2290141675784?text=${encodeURIComponent(msg)}`;
-      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      if (whatsappWindow) {
+        whatsappWindow.opener = null;
+        whatsappWindow.location.href = whatsappUrl;
+      } else if (!user) {
+        // Popup blockers may prevent a new tab; preserve the guest checkout
+        // by navigating this tab to the prepared WhatsApp message.
+        window.location.assign(whatsappUrl);
+        return;
+      } else {
+        toast.error("WhatsApp n'a pas pu s'ouvrir. Réessayez depuis votre commande.");
+      }
 
       toast.success(user
         ? "Commande enregistrée. Nous allons vérifier votre paiement."
@@ -113,6 +126,7 @@ function Checkout() {
       clear();
       navigate(user ? "/account" : "/");
     } catch (err) {
+      whatsappWindow?.close();
       console.error(err);
       toast.error(err instanceof Error ? err.message : "Erreur lors de l'enregistrement. Réessayez.");
     } finally {
