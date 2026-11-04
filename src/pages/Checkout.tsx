@@ -12,8 +12,9 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 
 const PAYMENT_METHODS = [
-  { id: "mtn", label: "MTN Mobile Money", number: "+229 01 41 67 57 84", color: "from-yellow-400 to-yellow-500" },
-  { id: "moov", label: "Moov Money", number: "+229 01 45 76 44 94", color: "from-sky-400 to-blue-500" },
+  { id: "mtn", label: "MTN Mobile Money", number: "01 96 16 57 00", color: "from-yellow-400 to-yellow-500" },
+  { id: "moov", label: "Moov Money", number: "01 55 54 71 72", color: "from-sky-400 to-blue-500" },
+  { id: "celtiis", label: "Celtiis Cash", number: "01 41 67 57 84", color: "from-red-500 to-rose-600" },
 ] as const;
 
 
@@ -23,7 +24,7 @@ function Checkout() {
   const { enriched, total, clear } = useCart();
   const { user } = useAuth();
 
-  const [method, setMethod] = useState<"mtn" | "moov">("mtn");
+  const [method, setMethod] = useState<"mtn" | "moov" | "celtiis">("mtn");
   const [name, setName] = useState(user?.user_metadata?.full_name ?? "");
   const [phone, setPhone] = useState("");
   const [reference, setReference] = useState("");
@@ -160,7 +161,7 @@ function Checkout() {
         {/* Left: payment instructions + form */}
         <div className="space-y-6">
           {/* Method picker */}
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {PAYMENT_METHODS.map((m) => (
               <button
                 key={m.id}
