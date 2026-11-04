@@ -179,9 +179,9 @@ export default function Services() {
   return (
     <div>
       <Seo
-        title="Réparation smartphone & ordinateur à Calavi — Eurisstech"
+        title="Réparation smartphone & ordinateur à Calavi — EURISS TECH"
         description="Réparation téléphone, iPhone, Samsung, Android et ordinateur portable à Calavi : changement d'écran, batterie, connecteur de charge, dépannage informatique et maintenance. Diagnostic gratuit, réparation garantie."
-        path="/services"
+        path="/reparation"
         jsonLd={jsonLd}
       />
 
