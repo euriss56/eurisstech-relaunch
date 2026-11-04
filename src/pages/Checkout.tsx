@@ -31,9 +31,13 @@ function Checkout() {
 
   const active = PAYMENT_METHODS.find((m) => m.id === method)!;
 
-  const copy = (value: string) => {
-    navigator.clipboard.writeText(value);
-    toast.success("Copié");
+  const copy = async (value: string) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      toast.success("Numéro copié.");
+    } catch {
+      toast.error("Copie impossible sur cet appareil. Veuillez sélectionner le numéro.");
+    }
   };
 
   const submit = async (e: React.FormEvent) => {
@@ -67,7 +71,7 @@ function Checkout() {
 
         if (error) throw error;
         if (order) {
-          await supabase.from("order_items").insert(
+          const { error: itemsError } = await supabase.from("order_items").insert(
             enriched.map((e) => ({
               order_id: order.id,
               product_slug: e.product.slug,
@@ -76,28 +80,41 @@ function Checkout() {
               unit_price: e.product.priceFrom,
             })),
           );
+          if (itemsError) {
+            console.error("Order created but its items could not be saved:", { orderId: order.id, itemsError });
+            throw new Error(`La commande #${order.id.slice(0, 8)} a été créée, mais ses articles n'ont pas pu être enregistrés. Contactez-nous avant de refaire le paiement.`);
+          }
         }
       }
 
       // Notify the team on WhatsApp with full payment info
-      const lines = enriched.map((e) => `• ${e.product.name.fr} x${e.qty} — ${formatXOF(e.product.priceFrom * e.qty)}`).join("%0A");
-      const msg =
-        `🛒 Nouvelle commande Eurisstech%0A` +
-        `Client : ${name}%0A` +
-        `Téléphone : ${phone}%0A%0A` +
-        `${lines}%0A%0A` +
-        `Total : ${formatXOF(total)}%0A` +
-        `Paiement : ${active.label}%0A` +
-        `Numéro destinataire : ${active.number}%0A` +
-        `Référence transaction : ${reference}`;
-      window.open(`https://wa.me/2290141675784?text=${msg}`, "_blank", "noopener,noreferrer");
+      const lines = enriched
+        .map((e) => `• ${e.product.name.fr} x${e.qty} — ${formatXOF(e.product.priceFrom * e.qty)}`)
+        .join("\n");
+      const msg = [
+        "🛒 Nouvelle commande Eurisstech",
+        `Client : ${name}`,
+        `Téléphone : ${phone}`,
+        "",
+        lines,
+        "",
+        `Total : ${formatXOF(total)}`,
+        `Paiement : ${active.label}`,
+        `Numéro destinataire : ${active.number}`,
+        `Référence transaction : ${reference}`,
+        user ? "Compte client : commande enregistrée sur le site." : "Commande invitée : demande transmise par WhatsApp.",
+      ].join("\n");
+      const whatsappUrl = `https://wa.me/2290141675784?text=${encodeURIComponent(msg)}`;
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
-      toast.success("Commande envoyée. Nous vérifions votre paiement.");
+      toast.success(user
+        ? "Commande enregistrée. Nous allons vérifier votre paiement."
+        : "Votre demande de commande est prête dans WhatsApp. Envoyez le message pour la transmettre.");
       clear();
       navigate(user ? "/account" : "/");
     } catch (err) {
       console.error(err);
-      toast.error("Erreur lors de l'enregistrement. Réessayez.");
+      toast.error(err instanceof Error ? err.message : "Erreur lors de l'enregistrement. Réessayez.");
     } finally {
       setLoading(false);
     }
