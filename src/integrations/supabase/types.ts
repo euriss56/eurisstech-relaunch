@@ -193,6 +193,18 @@ export type Database = {
         }
         Returns: boolean
       }
+      create_order_with_items: {
+        Args: {
+          _total: number
+          _customer_name: string
+          _customer_phone: string
+          _payment_method: string
+          _payment_phone: string
+          _payment_reference: string
+          _items: Json
+        }
+        Returns: string
+      }
     }
     Enums: {
       app_role: "admin" | "user"
