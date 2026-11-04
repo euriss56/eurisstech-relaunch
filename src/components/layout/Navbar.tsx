@@ -29,7 +29,7 @@ export function Navbar() {
       <nav className="container-tight flex h-16 items-center justify-between">
         <Logo />
 
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 xl:flex">
           {links.map((l) => (
             <NavLink
               key={l.to}
@@ -69,7 +69,7 @@ export function Navbar() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="xl:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Menu"
           >
@@ -79,7 +79,7 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-border md:hidden">
+        <div className="border-t border-border xl:hidden">
           <div className="container-tight flex flex-col gap-1 py-3">
             {links.map((l) => (
               <NavLink
