@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import {Link} from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
@@ -15,8 +15,14 @@ function Shop() {
   const { t, lang } = useI18n();
   const { add } = useCart();
   const [sp] = useSearchParams();
-  const search = { cat: sp.get("cat") as "graphic" | "web" | "all" | null };
-  const [filter, setFilter] = useState<"all" | Category>(search.cat ?? "all");
+  const requestedCategory = sp.get("cat");
+  const validCategory: "all" | Category =
+    requestedCategory === "graphic" || requestedCategory === "web" ? requestedCategory : "all";
+  const [filter, setFilter] = useState<"all" | Category>(validCategory);
+
+  useEffect(() => {
+    setFilter(validCategory);
+  }, [validCategory]);
 
   const filtered = filter === "all" ? PRODUCTS : PRODUCTS.filter((p) => p.category === filter);
 
