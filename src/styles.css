@@ -224,3 +224,77 @@
 .animate-marquee {
   animation: marquee 40s linear infinite;
 }
+
+
+/* Responsive safeguards shared by every route */
+@layer base {
+  html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 320px;
+    overflow-x: clip;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100dvh;
+    overflow-x: clip;
+  }
+
+  img, video, iframe, canvas, svg {
+    max-width: 100%;
+  }
+
+  img, video {
+    height: auto;
+  }
+
+  input, textarea, select, button {
+    max-width: 100%;
+  }
+
+  input, textarea, select {
+    min-width: 0;
+  }
+
+  pre, code {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 639px) {
+  .container-tight {
+    padding-inline: 1rem;
+  }
+
+  h1 {
+    overflow-wrap: anywhere;
+  }
+
+  section {
+    scroll-margin-top: 5rem;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
