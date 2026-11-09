@@ -309,3 +309,85 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* EURISS TECH — subtle motion language across every page */
+@keyframes euriss-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -7px, 0); }
+}
+@keyframes euriss-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 123, 255, 0); }
+  50% { box-shadow: 0 0 24px -8px rgba(0, 123, 255, 0.35); }
+}
+@keyframes euriss-shimmer {
+  0% { background-position: 120% 0; }
+  100% { background-position: -120% 0; }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 650ms cubic-bezier(.2,.7,.2,1), transform 650ms cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.scroll-reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+main a, main button, header a, header button {
+  transition: color 220ms ease, background-color 220ms ease, border-color 220ms ease,
+    box-shadow 260ms ease, transform 260ms cubic-bezier(.2,.7,.2,1);
+}
+main button:hover:not(:disabled), main a[class*="rounded"]:hover {
+  transform: translateY(-2px);
+}
+main button:active:not(:disabled), header button:active {
+  transform: scale(.97);
+}
+main article, main [class*="rounded-2xl"][class*="border"] {
+  transition: transform 320ms cubic-bezier(.2,.7,.2,1), border-color 260ms ease,
+    box-shadow 320ms ease;
+}
+main article:hover, main [class*="rounded-2xl"][class*="border"]:hover {
+  border-color: rgba(0, 123, 255, .42);
+}
+main img:not([data-no-motion]) {
+  transition: transform 650ms cubic-bezier(.2,.7,.2,1), filter 450ms ease;
+}
+main a:hover img:not([data-no-motion]) {
+  transform: scale(1.035);
+}
+header nav a {
+  position: relative;
+}
+header nav a::after {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.3rem;
+  left: 0.75rem;
+  height: 2px;
+  content: "";
+  background: #007BFF;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms ease;
+}
+header nav a:hover::after,
+header nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+.glow-primary {
+  animation: euriss-glow 3.8s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal, .scroll-reveal.is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .glow-primary { animation: none; }
+  main a, main button, header a, header button, main img {
+    transition: none !important;
+  }
+}
