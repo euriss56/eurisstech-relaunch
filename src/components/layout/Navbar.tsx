@@ -14,7 +14,6 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { to: "/", label: t("nav.home"), end: true },
     { to: "/services", label: "Services digitaux", end: false },
     { to: "/projets", label: "Projets", end: false },
     { to: "/reparation", label: "Réparation", end: false },
