@@ -62,6 +62,8 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const location = useLocation();
+
   return (
     <div className="relative flex min-h-dvh flex-col">
       <RouteSeo />
@@ -69,8 +71,16 @@ export default function App() {
       <ScrollReveal />
       <PromoBanner />
       <Navbar />
-      <main className="relative z-10 flex-1">
-        <Routes>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.main
+          key={location.pathname}
+          initial={{ opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.32, ease: "easeOut" }}
+          className="relative z-10 flex-1"
+        >
+        <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -90,7 +100,8 @@ export default function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </main>
+        </motion.main>
+      </AnimatePresence>
       <Footer />
       <WhatsAppButton />
     </div>
