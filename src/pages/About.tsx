@@ -16,7 +16,6 @@ import {
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import founderImg from "@/assets/founder.jpg";
-import locauxImg from "@/assets/eurisstech-locaux.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 28 },
@@ -81,67 +80,100 @@ function About() {
   return (
     <div className="overflow-hidden">
       {/* Hero */}
-      <section className="relative isolate border-b border-border">
-        <div
-          className="absolute inset-0 -z-20 bg-cover bg-center opacity-25"
-          style={{ backgroundImage: `url(${locauxImg})` }}
-        />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-background/95 to-primary/10" />
-        <div className="pointer-events-none absolute -right-32 top-10 -z-10 h-80 w-80 rounded-full bg-primary/20 blur-[110px]" />
-        <div className="container mx-auto grid items-center gap-12 px-4 py-20 sm:py-28 lg:grid-cols-[1.08fr_0.92fr]">
-          <motion.div initial="hidden" animate="visible" variants={reveal}>
+      <section className="relative isolate overflow-hidden border-b border-border bg-background">
+        <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-primary/10 blur-3xl" />
+          <div className="absolute -bottom-48 -left-40 h-[30rem] w-[30rem] rounded-full bg-primary/10 blur-3xl" />
+          <div className="absolute inset-0 opacity-[0.035] [background-image:linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] [background-size:52px_52px]" />
+        </div>
+
+        <div className="container mx-auto grid min-h-[620px] items-center gap-14 px-4 py-20 sm:py-24 lg:grid-cols-[1.08fr_0.92fr]">
+          <motion.div initial="hidden" animate="visible" variants={reveal} className="relative z-10">
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              <Sparkles className="h-4 w-4" /> À propos d'EURISS TECH
+              <Sparkles className="h-4 w-4" /> Notre histoire
             </span>
-            <h1 className="mt-7 max-w-3xl text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-              Le numérique au service de vos{" "}
-              <span className="text-primary">ambitions.</span>
+            <h1 className="mt-7 max-w-3xl text-4xl font-black leading-[1.06] tracking-tight sm:text-5xl lg:text-[4.2rem]">
+              Une équipe béninoise au service des marques qui{" "}
+              <span className="relative inline-block text-primary">
+                osent<span className="text-foreground">.</span>
+                <span className="absolute -bottom-1 left-0 h-2 w-full rounded-full bg-primary/20" />
+              </span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-              EURISS TECH imagine et développe des solutions numériques pour les
-              entreprises, les entrepreneurs et les particuliers. De la création
-              web à l'assistance informatique, nous faisons du numérique un outil
-              concret pour avancer.
+            <p className="mt-7 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
+              EURISS TECH est né d'une conviction simple : les entrepreneurs africains
+              méritent des outils créatifs et digitaux du même niveau que les plus
+              grands studios du monde — sans le tarif qui va avec.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-9 flex flex-wrap gap-3">
               <Link to="/contact">
                 <Button size="lg" className="glow-primary">
                   Parlons de votre projet <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link to="/projets">
-                <Button size="lg" variant="outline">
-                  Découvrir nos projets
-                </Button>
+                <Button size="lg" variant="outline">Voir nos réalisations</Button>
               </Link>
             </div>
-            <p className="mt-8 text-sm font-extrabold tracking-[0.22em] text-foreground">
+            <p className="mt-9 text-xs font-extrabold tracking-[0.22em] text-foreground sm:text-sm">
               INNOVER. <span className="text-primary">DÉVELOPPER.</span> TRANSFORMER.
             </p>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.94, x: 24 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
+            initial={{ opacity: 0, y: 24, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.12 }}
             className="relative mx-auto w-full max-w-xl"
           >
-            <div className="absolute -inset-4 rounded-[2rem] bg-primary/20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[1.6rem] border border-primary/20 bg-card p-2 shadow-elegant">
-              <img
-                src={locauxImg}
-                alt="Univers et environnement de travail EURISS TECH"
-                className="aspect-[5/4] w-full rounded-[1.2rem] object-cover"
-                decoding="async"
-              />
-              <div className="absolute bottom-6 left-6 right-6 rounded-xl border border-white/15 bg-background/85 p-4 shadow-xl backdrop-blur-xl">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">
-                  Notre signature
-                </p>
-                <p className="mt-1 text-lg font-extrabold tracking-wide">
-                  INNOVER. DÉVELOPPER. TRANSFORMER.
-                </p>
+            <div className="absolute -inset-5 rounded-[2.5rem] bg-primary/10 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-border bg-card p-5 shadow-elegant sm:p-7">
+              <div className="flex items-center justify-between border-b border-border pb-5">
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-muted-foreground">EURISS TECH / STUDIO</p>
+                  <p className="mt-1 text-sm font-bold">De l'idée à l'impact.</p>
+                </div>
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-primary text-primary-foreground shadow-lg shadow-primary/20">
+                  <Code2 className="h-5 w-5" />
+                </span>
               </div>
+
+              <div className="relative my-7 flex aspect-[5/4] items-center justify-center overflow-hidden rounded-2xl bg-[#080D19] p-6 text-white">
+                <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.18)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.18)_1px,transparent_1px)] [background-size:28px_28px]" />
+                <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full border border-primary/40" />
+                <div className="absolute -right-5 -top-5 h-44 w-44 rounded-full border border-primary/30" />
+                <div className="absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-primary/30 blur-3xl" />
+                <div className="relative z-10 text-center">
+                  <div className="mx-auto mb-5 flex items-center justify-center gap-2">
+                    <span className="h-2 w-2 rounded-full bg-primary" />
+                    <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-200">Digital craftsmanship</span>
+                  </div>
+                  <div className="text-6xl font-black tracking-[-0.09em] sm:text-7xl">
+                    E<span className="text-primary">.</span>T
+                  </div>
+                  <p className="mt-3 text-xs font-semibold tracking-[0.28em] text-white/60">INNOVER · DÉVELOPPER · TRANSFORMER</p>
+                  <div className="mx-auto mt-7 h-px w-28 bg-gradient-to-r from-transparent via-primary to-transparent" />
+                  <p className="mt-4 text-sm font-medium text-white/80">Le numérique, autrement.</p>
+                </div>
+                <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold tracking-wider text-white/75 backdrop-blur">01 — CRÉER</span>
+                <span className="absolute bottom-5 right-5 rounded-full border border-primary/40 bg-primary/15 px-3 py-1.5 text-[10px] font-semibold tracking-wider text-blue-100 backdrop-blur">02 — TRANSFORMER</span>
+              </div>
+
+              <div className="grid grid-cols-3 gap-2">
+                {[
+                  { number: "01", label: "Imaginer" },
+                  { number: "02", label: "Développer" },
+                  { number: "03", label: "Transformer" },
+                ].map((item) => (
+                  <div key={item.number} className="rounded-xl border border-border bg-background px-3 py-3">
+                    <p className="text-[10px] font-bold tracking-widest text-primary">{item.number}</p>
+                    <p className="mt-1 text-xs font-bold sm:text-sm">{item.label}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="absolute -left-5 top-1/3 hidden rounded-xl border border-border bg-card px-4 py-3 shadow-xl sm:block">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Notre approche</p>
+              <p className="mt-1 text-sm font-extrabold"><span className="text-primary">Créativité</span> + Technologie</p>
             </div>
           </motion.div>
         </div>
